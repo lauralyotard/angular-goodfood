@@ -1,0 +1,75 @@
+/*****************Colors****************/
+.c-white {
+  color : #FFFFFF;
+}
+
+.b-white {
+  background-color : #FFFFFF;
+}
+
+.c-cream {
+  color : #D0A775;
+}
+
+.b-cream {
+  background-color : #D0A775;
+}
+
+.c-lightcream {
+  color : #ECE4C5;
+}
+
+.b-lightcream {
+  background-color : #ECE4C5;
+}
+
+.c-grey {
+  color : #707070;
+}
+
+.b-grey {
+  background-color : #707070;
+}
+
+.c-redbrown {
+  color : #B2451A;
+}
+
+.b-redbrown {
+  background-color : #B2451A;
+}
+
+.c-black {
+  color : #000000;
+}
+/*****************Colors****************/
+
+/*****************Logo*****************/
+.logo-size {
+  height: 3em;
+  margin-top: 0.5em;
+}
+
+.img-card-size {
+  height: 3em;
+  margin-top: 3em;
+}
+/*****************Logo*****************/
+
+/*****************Header****************/
+.d-flex {
+  display: flex;
+}
+
+.j-content-bet {
+  justify-content: space-between;
+}
+
+.j-content-ar {
+  justify-content: space-around;
+}
+
+.marg2 {
+  margin: 2em;
+}
+/*****************Header****************/
