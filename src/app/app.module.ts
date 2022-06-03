@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -13,9 +14,12 @@ import {PizzalistComponent} from './pizzaList/pizzaList.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {HomeComponent} from './home/home.component';
+import {LocationComponent} from './location/location.component';
 
 @NgModule({
   declarations: [
+    AppComponent,
+    LocationComponent,
     AppComponent,
     PizzalistComponent,
     PageNotFoundComponent,
@@ -29,7 +33,11 @@ import {HomeComponent} from './home/home.component';
     MatGridListModule,
     MatButtonModule,
     MatCardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCardModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDm28JF7IhXy0Umx51bEIW_FVTx4zisOBQ'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
