@@ -1,0 +1,33 @@
+.max-size {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  margin-top: 1em;
+}
+
+.td-space {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 599px) {
+  .img-tab-size {
+    height: 3em;
+  }
+}
+
+@media (min-width: 601px) {
+  .img-tab-size {
+    height: 5em;
+  }
+}
+
+.title-space {
+  padding: 1em;
+}

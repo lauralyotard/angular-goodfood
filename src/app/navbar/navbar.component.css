@@ -73,3 +73,24 @@
   margin: 2em;
 }
 /*****************Header****************/
+/*****************Sidebar****************/
+@media (max-width: 599px) {
+  .show-pc {
+    display: none;
+  }
+
+  .icon-size {
+    margin: 1em;
+  }
+}
+
+@media (min-width: 601px) {
+  .show-mobile {
+    display: none;
+  }
+
+  .max-size {
+    width: 100%;
+  }
+}
+/*****************Sidebar****************/

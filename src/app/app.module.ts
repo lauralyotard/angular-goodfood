@@ -13,6 +13,12 @@ import {PizzalistComponent} from './pizzaList/pizzaList.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {HomeComponent} from './home/home.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatBadgeModule} from '@angular/material/badge';
+import {ShopComponent} from './shop/shop.component';
+import {MatListModule} from '@angular/material/list';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -20,17 +26,23 @@ import {HomeComponent} from './home/home.component';
     PizzalistComponent,
     PageNotFoundComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ShopComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatGridListModule,
-    MatButtonModule,
-    MatCardModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatGridListModule,
+        MatButtonModule,
+        MatCardModule,
+        AppRoutingModule,
+        MatIconModule,
+        MatMenuModule,
+        MatBadgeModule,
+        MatListModule,
+        MatTableModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

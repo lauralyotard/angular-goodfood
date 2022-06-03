@@ -1,4 +1,4 @@
-<mat-toolbar class="b-cream">
+<mat-toolbar class="b-cream show-pc">
   <mat-toolbar-row class="d-flex j-content-bet">
     <div>
       <a routerLink="app-home">
@@ -12,7 +12,19 @@
       <button mat-button routerLink="app-pizzaList">Carte des pizzas</button>
     </div>
     <div>
-      <button mat-flat-button>Connexion</button>
+      <button matBadge="4" matBadgeColor="warn" routerLink="app-shop" mat-button>Panier</button>
+    </div>
+    <div>
+      <button mat-raised-button>Connexion</button>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
+<div class="show-mobile max-size b-cream">
+  <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="app-home">Accueil</button>
+    <button mat-menu-item routerLink="app-pizzaList">Pizza</button>
+    <button mat-menu-item routerLink="app-shop">Panier</button>
+  </mat-menu>
+
+</div>
