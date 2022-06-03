@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -19,15 +20,32 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {ShopComponent} from './shop/shop.component';
 import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
+import {LocationComponent} from './location/location.component';
 
 @NgModule({
   declarations: [
+    AppComponent,
+    LocationComponent,
     AppComponent,
     PizzalistComponent,
     PageNotFoundComponent,
     NavbarComponent,
     HomeComponent,
     ShopComponent
+    HomeComponent
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatCardModule,
+    AppRoutingModule,
+    MatCardModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDm28JF7IhXy0Umx51bEIW_FVTx4zisOBQ'
+    })
   ],
     imports: [
         BrowserModule,
