@@ -22,6 +22,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {LocationComponent} from './location/location.component';
 import {FooterComponent} from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import {RestaurantService} from './config/service';
 
 @NgModule({
   declarations: [
@@ -52,9 +54,10 @@ import {FooterComponent} from './footer/footer.component';
     MatTableModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDm28JF7IhXy0Umx51bEIW_FVTx4zisOBQ'
-    })
+    }),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ RestaurantService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
