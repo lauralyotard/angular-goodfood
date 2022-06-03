@@ -1,0 +1,72 @@
+body {
+  display: block;
+}
+
+#top {
+  width: 100%;
+}
+
+#bottom {
+  display: flex;
+}
+
+#left {
+  width: 80%;
+}
+
+#search-div {
+  width: 80%;
+  height: 8em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#loupe-img {
+  height: 3em;
+  width: 3em;
+}
+
+#search-input {
+  width: 80%;
+  padding:15px;
+  border: 1px solid;
+  border-radius: 15px;
+  font-size: 1em;
+}
+
+agm-map {
+  width: 100%;
+  height: 44em;
+}
+
+#right {
+  width: 20%;
+}
+
+#restaurants-div {
+  width: 100%;
+}
+
+.restaurant-card {
+  width: 75%;
+  border: 1px solid;
+  border-radius: 15px;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.restaurant-card:hover {
+  border-color: #B2451A;
+  color: #B2451A;
+  cursor: pointer;
+}
+
+.first-card-div {
+  font-family: bold;
+}
+
+.second-card-div, .third-card-div {
+  font-family: italic;
+}

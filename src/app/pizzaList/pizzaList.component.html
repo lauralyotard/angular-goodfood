@@ -1,0 +1,63 @@
+<button mat-raised-button class="marg05 b-redbrown">Ajouter une pizza</button>
+<div class="d-flex j-content-ar marg2 r-line">
+  <div *ngFor="let pizza of lesPizzas">
+    <mat-card class="card-size">
+      <div class="cross-align">
+        <a (click)="log()"><img src="assets/img/cross.png" class="cross-size"/></a>
+      </div>
+      <mat-card-title>{{ pizza.name }}</mat-card-title>
+      <img class="pizzas-size" mat-card-image src="assets/img/pizza.png">
+      <mat-card-subtitle>{{ pizza.price }} euros</mat-card-subtitle>
+      <mat-card-content class="content-size">{{ pizza.desc }}</mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-button class="b-lightcream">Ajouter</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <!--<mat-card class="card-size">
+    <mat-card-title>Pizza 1</mat-card-title>
+    <img class="pizzas-size" mat-card-image src="assets/img/pizza.png">
+    <mat-card-subtitle>Price</mat-card-subtitle>
+    <mat-card-content>Description</mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button>Ajouter</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="card-size">
+    <mat-card-title>Pizza 2</mat-card-title>
+    <img class="pizzas-size" mat-card-image src="assets/img/pizza2.png">
+    <mat-card-subtitle>Price</mat-card-subtitle>
+    <mat-card-content>Description</mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button>Ajouter</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="card-size">
+    <mat-card-title>Pizza 3</mat-card-title>
+    <img class="pizzas-size" mat-card-image src="assets/img/pizza3.png">
+    <mat-card-subtitle>Price</mat-card-subtitle>
+    <mat-card-content>Description</mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button>Ajouter</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="card-size">
+    <mat-card-title>Pizza 4</mat-card-title>
+    <img class="pizzas-size" mat-card-image src="assets/img/pizza4.png">
+    <mat-card-subtitle>Price</mat-card-subtitle>
+    <mat-card-content>Description</mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button>Ajouter</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="card-size">
+    <mat-card-title>Pizza 5</mat-card-title>
+    <img class="pizzas-size" mat-card-image src="assets/img/pizza5.png">
+    <mat-card-subtitle>Price</mat-card-subtitle>
+    <mat-card-content>Description</mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button>Ajouter</button>
+    </mat-card-actions>
+  </mat-card>
+  -->
+</div>
