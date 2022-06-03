@@ -74,13 +74,7 @@
 }
 /*****************Header****************/
 
-#background-div {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-
-#background-img {
+#first-img {
   width: 100%;
 }
 
