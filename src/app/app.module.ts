@@ -18,7 +18,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatBadgeModule} from '@angular/material/badge';
 import {ShopComponent} from './shop/shop.component';
-import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {LocationComponent} from './location/location.component';
 
@@ -31,7 +30,7 @@ import {LocationComponent} from './location/location.component';
     PageNotFoundComponent,
     NavbarComponent,
     HomeComponent,
-    ShopComponent
+    ShopComponent,
     HomeComponent
   ],
   imports: [
@@ -43,24 +42,14 @@ import {LocationComponent} from './location/location.component';
     MatCardModule,
     AppRoutingModule,
     MatCardModule,
+    MatTableModule,
+    MatBadgeModule,
+    MatMenuModule,
+    MatIconModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDm28JF7IhXy0Umx51bEIW_FVTx4zisOBQ'
     })
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatGridListModule,
-        MatButtonModule,
-        MatCardModule,
-        AppRoutingModule,
-        MatIconModule,
-        MatMenuModule,
-        MatBadgeModule,
-        MatListModule,
-        MatTableModule
-    ],
   providers: [],
   bootstrap: [AppComponent]
 })
