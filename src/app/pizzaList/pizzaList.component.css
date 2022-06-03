@@ -69,7 +69,55 @@
   justify-content: space-around;
 }
 
+.marg05 {
+  margin: 0.5em;
+}
+
 .marg2 {
   margin: 2em;
 }
+
+.r-line{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+}
+
 /*****************Header****************/
+
+/****************Pizza******************/
+.max-size {
+  width: 100%;
+}
+
+.max-page {
+  display: grid;
+}
+
+.card-size {
+  margin: 0.5em;
+  text-align: center;
+}
+
+.pizzas-size {
+  height: 13em;
+  width: 13em;
+  margin: auto;
+  margin-bottom: 0.5em;
+}
+
+.content-size {
+  margin: auto;
+  max-width: 15em;
+}
+
+.cross-align {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cross-size {
+  width: 3em;
+  margin-left: 0;
+  cursor: pointer;
+}
+/****************Pizza******************/

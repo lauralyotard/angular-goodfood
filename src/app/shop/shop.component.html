@@ -1,0 +1,19 @@
+<h2 class="mat-title title-space">Mon panier</h2>
+<table class="max-size">
+  <thead>
+  <th></th>
+  <th>Nom</th>
+  <th>Prix</th>
+  <th>Description</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let pizza of lesPizzas">
+    <td class="td-space"><img src="assets/img/pizza7.png" class="img-tab-size"/></td>
+    <td>{{pizza.name}}</td>
+    <td>{{pizza.price}}e</td>
+    <td>{{pizza.desc}}</td>
+    <td><mat-icon>edit</mat-icon><mat-icon>delete</mat-icon></td>
+  </tr>
+  </tbody>
+</table>

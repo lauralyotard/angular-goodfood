@@ -14,6 +14,12 @@ import {PizzalistComponent} from './pizzaList/pizzaList.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {HomeComponent} from './home/home.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatBadgeModule} from '@angular/material/badge';
+import {ShopComponent} from './shop/shop.component';
+import {MatListModule} from '@angular/material/list';
+import {MatTableModule} from '@angular/material/table';
 import {LocationComponent} from './location/location.component';
 
 @NgModule({
@@ -24,6 +30,8 @@ import {LocationComponent} from './location/location.component';
     PizzalistComponent,
     PageNotFoundComponent,
     NavbarComponent,
+    HomeComponent,
+    ShopComponent
     HomeComponent
   ],
   imports: [
@@ -39,6 +47,20 @@ import {LocationComponent} from './location/location.component';
       apiKey: 'AIzaSyDm28JF7IhXy0Umx51bEIW_FVTx4zisOBQ'
     })
   ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatGridListModule,
+        MatButtonModule,
+        MatCardModule,
+        AppRoutingModule,
+        MatIconModule,
+        MatMenuModule,
+        MatBadgeModule,
+        MatListModule,
+        MatTableModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
