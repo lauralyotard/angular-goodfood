@@ -31,7 +31,7 @@ import {LocationComponent} from './location/location.component';
     PageNotFoundComponent,
     NavbarComponent,
     HomeComponent,
-    ShopComponent
+    ShopComponent,
     HomeComponent
   ],
   imports: [
@@ -43,24 +43,15 @@ import {LocationComponent} from './location/location.component';
     MatCardModule,
     AppRoutingModule,
     MatCardModule,
+    MatIconModule,
+    MatMenuModule,
+    MatBadgeModule,
+    MatListModule,
+    MatTableModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDm28JF7IhXy0Umx51bEIW_FVTx4zisOBQ'
     })
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatGridListModule,
-        MatButtonModule,
-        MatCardModule,
-        AppRoutingModule,
-        MatIconModule,
-        MatMenuModule,
-        MatBadgeModule,
-        MatListModule,
-        MatTableModule
-    ],
   providers: [],
   bootstrap: [AppComponent]
 })
