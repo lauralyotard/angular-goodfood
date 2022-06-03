@@ -21,6 +21,7 @@ import {ShopComponent} from './shop/shop.component';
 import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {LocationComponent} from './location/location.component';
+import {FooterComponent} from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {LocationComponent} from './location/location.component';
     NavbarComponent,
     HomeComponent,
     ShopComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
