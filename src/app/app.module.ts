@@ -21,6 +21,9 @@ import {ShopComponent} from './shop/shop.component';
 import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {LocationComponent} from './location/location.component';
+import {FooterComponent} from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import {RestaurantService} from './config/service';
 
 @NgModule({
   declarations: [
@@ -31,8 +34,9 @@ import {LocationComponent} from './location/location.component';
     PageNotFoundComponent,
     NavbarComponent,
     HomeComponent,
-    ShopComponent
-    HomeComponent
+    ShopComponent,
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -43,25 +47,17 @@ import {LocationComponent} from './location/location.component';
     MatCardModule,
     AppRoutingModule,
     MatCardModule,
+    MatIconModule,
+    MatMenuModule,
+    MatBadgeModule,
+    MatListModule,
+    MatTableModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDm28JF7IhXy0Umx51bEIW_FVTx4zisOBQ'
-    })
+    }),
+    HttpClientModule
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatGridListModule,
-        MatButtonModule,
-        MatCardModule,
-        AppRoutingModule,
-        MatIconModule,
-        MatMenuModule,
-        MatBadgeModule,
-        MatListModule,
-        MatTableModule
-    ],
-  providers: [],
+  providers: [ RestaurantService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
