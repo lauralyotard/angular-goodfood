@@ -29,7 +29,6 @@ import {FooterComponent} from './footer/footer.component';
 import {RestaurantService} from './config/service';
 import {ConnexionComponent} from './connexion/connexion.component';
 import {AccountComponent} from "./compte/account.component";
-import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
