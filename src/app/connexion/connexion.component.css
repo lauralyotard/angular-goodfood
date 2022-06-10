@@ -1,104 +1,37 @@
-/*****************Colors****************/
-.c-white {
-  color : #FFFFFF;
+.div-margin {
+  padding-top: 5%;
 }
 
-.b-white {
-  background-color : #FFFFFF;
+.div-center {
+  text-align: center;
 }
 
-.c-cream {
-  color : #D0A775;
-}
-
-.b-cream {
-  background-color : #D0A775;
-}
-
-.c-lightcream {
-  color : #ECE4C5;
-}
-
-.b-lightcream {
+#connexion {
+  height: 80%;
   background-color : #ECE4C5;
 }
 
-.c-grey {
-  color : #707070;
+#body {
+  padding-top: 10%;
+  margin-left: 43%;
+  margin-right: 43%;
 }
 
-.b-grey {
-  background-color : #707070;
+#link-forget-password {
+  text-align: center;
 }
 
-.c-redbrown {
-  color : #B2451A;
+.link-style {
+  font-size: 85%;  
+  font-style: italic;
+  text-decoration: none;
+  color: blue;
 }
 
-.b-redbrown {
-  background-color : #B2451A;
+.div-full-width {
+  width: 100%;
 }
 
-.c-black {
-  color : #000000;
-}
-/*****************Colors****************/
-
-/*****************Logo*****************/
-.logo-size {
-  height: 3em;
-  margin-top: 0.5em;
-}
-
-.img-card-size {
-  height: 3em;
-  margin-top: 3em;
-}
-/*****************Logo*****************/
-
-/*****************Header****************/
-.d-flex {
-  display: flex;
-}
-
-.j-content-bet {
-  justify-content: space-between;
-}
-
-.j-content-ar {
-  justify-content: space-around;
-}
-
-.marg2 {
-  margin: 2em;
-}
-/*****************Header****************/
-/*****************Sidebar****************/
-@media (max-width: 599px) {
-  .show-pc {
-    display: none;
-  }
-
-  .icon-size {
-    margin: 1em;
-  }
-}
-
-@media (min-width: 601px) {
-  .show-mobile {
-    display: none;
-  }
-
-  .max-size {
-    width: 100%;
-  }
-}
-/*****************Sidebar****************/
-
-.login {
-  height: 40em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+#button-connexion {
+  width: 100%;
 }

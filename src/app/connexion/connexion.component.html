@@ -1,11 +1,30 @@
-<div class="b-lightcream login">
-  <div>
-    <label>Identifiant (e-mail)</label><br/>
-    <input>
+<div id="connexion">
+  <div id="body">
+    <div class="div-margin div-center">
+      <h2 id="title-connexion">Connexion</h2>
+    </div>
+    <div>
+      <mat-form-field class="div-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="div-full-width" appearance="fill">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+    <div id="link-forget-password">
+      <a class="link-style" href="#">Mot de passe oublié</a>
+    </div>
+    <div class="div-margin">
+      <a mat-raised-button class="div-full-width" href="/app-home">Connexion</a>
+    </div>
+    <div class="div-margin div-center">
+      <label id="inscription">
+        Pas encore inscrit ? <a class="link-style" href="#">Cliquez ici</a>
+      </label>
+    </div>
   </div>
-  <div>
-    <label>Mot de passe</label><br/>
-    <input type="password">
-  </div>
-  <button mat-button href="/app-home">Connexion</button>
 </div>
