@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  t = true;
+
+  f1() {
+    this.t = !this.t;
+  }
 }
