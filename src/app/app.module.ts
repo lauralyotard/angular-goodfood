@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {RestaurantService} from './config/service';
 import {ConnexionComponent} from './connexion/connexion.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {AccountComponent} from "./compte/account.component";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ShopComponent,
     HomeComponent,
     FooterComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
