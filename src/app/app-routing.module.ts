@@ -10,7 +10,7 @@ import {FooterComponent} from './footer/footer.component';
 import {ConnexionComponent} from './connexion/connexion.component';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/', pathMatch: 'full' },
+  { path: '',   redirectTo: 'app-home', pathMatch: 'full' },
   { path: 'app-component', component: AppComponent },
   { path: 'app-footer', component: FooterComponent },
   { path: 'app-pizzaList', component: PizzalistComponent },
