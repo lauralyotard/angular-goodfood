@@ -8,6 +8,7 @@ import {ShopComponent} from './shop/shop.component';
 import {LocationComponent} from './location/location.component';
 import {FooterComponent} from './footer/footer.component';
 import {ConnexionComponent} from './connexion/connexion.component';
+import {AccountComponent} from "./compte/account.component";
 
 const routes: Routes = [
   { path: '',   redirectTo: 'app-home', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'app-shop', component: ShopComponent },
   { path: 'app-location', component: LocationComponent },
   { path: 'app-connexion', component: ConnexionComponent },
+  { path: 'app-account', component: AccountComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
