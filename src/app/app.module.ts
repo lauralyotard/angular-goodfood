@@ -24,6 +24,8 @@ import {LocationComponent} from './location/location.component';
 import {FooterComponent} from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import {RestaurantService} from './config/service';
+import {ConnexionComponent} from './connexion/connexion.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import {RestaurantService} from './config/service';
     HomeComponent,
     ShopComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    ConnexionComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import {RestaurantService} from './config/service';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDm28JF7IhXy0Umx51bEIW_FVTx4zisOBQ'
     }),
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule
   ],
   providers: [ RestaurantService ],
   bootstrap: [AppComponent]

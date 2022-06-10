@@ -7,15 +7,17 @@ import {HomeComponent} from './home/home.component';
 import {ShopComponent} from './shop/shop.component';
 import {LocationComponent} from './location/location.component';
 import {FooterComponent} from './footer/footer.component';
+import {ConnexionComponent} from './connexion/connexion.component';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/', pathMatch: 'full' },
+  { path: '',   redirectTo: 'app-home', pathMatch: 'full' },
   { path: 'app-component', component: AppComponent },
   { path: 'app-footer', component: FooterComponent },
   { path: 'app-pizzaList', component: PizzalistComponent },
   { path: 'app-home', component: HomeComponent },
   { path: 'app-shop', component: ShopComponent },
   { path: 'app-location', component: LocationComponent },
+  { path: 'app-connexion', component: ConnexionComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

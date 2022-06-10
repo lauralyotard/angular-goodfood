@@ -14,8 +14,13 @@
     <div>
       <button matBadge="4" matBadgeColor="warn" routerLink="app-shop" mat-button>Panier</button>
     </div>
-    <div>
-      <button mat-raised-button>Connexion</button>
+    <div *ngIf="!t">
+      <button mat-raised-button routerLink="app-connexion" (click)="f1()">Connexion</button>
+    </div>
+    <div *ngIf="t">
+      <button routerLink="app-account" mat-fab color="warn" class="b-lightcream" (click)="f1()">
+        <mat-icon class="c-redbrown">home</mat-icon>
+      </button>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
@@ -25,6 +30,7 @@
     <button mat-menu-item routerLink="app-home">Accueil</button>
     <button mat-menu-item routerLink="app-pizzaList">Pizza</button>
     <button mat-menu-item routerLink="app-shop">Panier</button>
+    <button mat-menu-item routerLink="app-connexion">Connexion</button>
   </mat-menu>
 
 </div>
