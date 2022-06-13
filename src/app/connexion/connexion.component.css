@@ -1,3 +1,4 @@
+@import '../colors.css';
 .div-margin {
   padding-top: 5%;
 }
@@ -22,10 +23,9 @@
 }
 
 .link-style {
-  font-size: 85%;  
+  font-size: 85%;
   font-style: italic;
   text-decoration: none;
-  color: blue;
 }
 
 .div-full-width {
