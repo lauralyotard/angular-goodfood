@@ -6,20 +6,20 @@
       </a>
     </div>
     <div>
-      <button mat-button routerLink="app-location">Trouver un restaurant</button>
+      <button class="b-purple c-white" mat-button routerLink="app-location">Trouver un restaurant</button>
     </div>
     <div>
-      <button mat-button routerLink="app-pizzaList">Carte des pizzas</button>
+      <button class="b-purple c-white" mat-button routerLink="app-pizzaList">Carte des pizzas</button>
     </div>
     <div>
-      <button matBadge="4" matBadgeColor="warn" routerLink="app-shop" mat-button>Panier</button>
+      <button class="b-purple c-white" matBadgeColor="warn" routerLink="app-shop" mat-button>Panier</button>
     </div>
     <div *ngIf="!t">
-      <button mat-raised-button routerLink="app-connexion" (click)="f1()">Connexion</button>
+      <button mat-raised-button class="b-white c-purple" routerLink="app-connexion" (click)="f1()">Connexion</button>
     </div>
     <div *ngIf="t">
-      <button routerLink="app-account" mat-fab color="warn" class="b-lightcream" (click)="f1()">
-        <mat-icon class="c-redbrown">home</mat-icon>
+      <button routerLink="app-account" mat-fab color="warn" class="b-purple" (click)="f1()">
+        <mat-icon class="c-white">home</mat-icon>
       </button>
     </div>
   </mat-toolbar-row>

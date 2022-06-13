@@ -1,3 +1,4 @@
+@import '../colors.css';
 .fundo{
   animation: scales 3s alternate  infinite;
   transform-origin: center;
