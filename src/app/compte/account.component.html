@@ -8,10 +8,10 @@
       <h3 class="profil-title">Camille Dupont</h3>
     </div>
     <div class="navbar-profil c-purple">
-      <p><a class="link-style" (click)="showPage(1)">Mes commandes</a></p>
-      <p><a class="link-style" (click)="showPage(2)">Mes adresses</a></p>
-      <p><a class="link-style" (click)="showPage(3)">Mes moyens de paiement</a></p>
-      <p><a class="link-style" (click)="showPage(4)">Mes informations</a></p>
+      <p><a class="link-style" (click)="showPage(num=1)">Mes commandes</a></p>
+      <p><a class="link-style" (click)="showPage(num=2)">Mes adresses</a></p>
+      <p><a class="link-style" (click)="showPage(num=3)">Mes moyens de paiement</a></p>
+      <p><a class="link-style" (click)="showPage(num=4)">Mes informations</a></p>
     </div>
   </div>
   <div class="b-redbrown d-left">
@@ -33,6 +33,32 @@
         <div class="mail-connexion">
           <p>mail.compte@goodfood.com</p>
           <mat-icon>info</mat-icon>
+        </div>
+      </div>
+      <div>
+        <div>
+          <mat-form-field class="div-full-width" appearance="fill">
+            <mat-label>Prénom</mat-label>
+            <input matInput>
+            <mat-icon matSuffix></mat-icon>
+          </mat-form-field>
+          <mat-form-field class="div-full-width" appearance="fill">
+            <mat-label>Nom de famille</mat-label>
+            <input matInput>
+            <mat-icon matSuffix></mat-icon>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="div-full-width" appearance="fill">
+            <mat-label>E-mail de contact</mat-label>
+            <input matInput>
+            <mat-icon matSuffix>mail</mat-icon>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Téléphone</mat-label>
+            <input matInput>
+            <mat-icon matSuffix>phone</mat-icon>
+          </mat-form-field>
         </div>
       </div>
     </div>
