@@ -30,6 +30,7 @@ import {FooterComponent} from './footer/footer.component';
 import {RestaurantService} from './config/service';
 import {ConnexionComponent} from './connexion/connexion.component';
 import {AccountComponent} from "./compte/account.component";
+import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import {AccountComponent} from "./compte/account.component";
     HomeComponent,
     FooterComponent,
     ConnexionComponent,
-    AccountComponent
+    AccountComponent,
+    CgvMentionsComponent
   ],
   imports: [
     BrowserModule,
