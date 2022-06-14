@@ -10,7 +10,6 @@
   margin-top: 3em;
 }
 /*****************Logo*****************/
-
 /*****************Header****************/
 .d-flex {
   display: flex;
@@ -65,7 +64,7 @@
   width: 150%;
 }
 /*****************LEFT zone****************/
-.idendity {
+.identity {
   margin: 2em;
   padding: 1em;
   border: 2px solid black;
@@ -94,3 +93,20 @@
   cursor: pointer;
 }
 /*****************RIGHT zone****************/
+/*****************info****************/
+.form-info {
+  margin: 2em;
+}
+
+.title {
+  margin: 1em;
+}
+
+.button-info {
+  margin: 1em;
+}
+
+.form-info div mat-form-field {
+  margin-left: 1em;
+}
+/*****************info****************/

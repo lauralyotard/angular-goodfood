@@ -1,6 +1,6 @@
-<div class="b-lightcream d-c-flex">
-  <div class="b-grey d-right">
-    <div class="idendity">
+<div class="d-c-flex">
+  <div class="b-lightcream d-right">
+    <div class="identity">
       <div class="edit-button">
         <ngx-avatar size="100" src="https://thispersondoesnotexist.com/image"></ngx-avatar>
         <mat-icon class="c-purple">edit</mat-icon>
@@ -14,53 +14,83 @@
       <p><a class="link-style" (click)="showPage(num=4)">Mes informations</a></p>
     </div>
   </div>
-  <div class="b-redbrown d-left">
+  <div class="d-left">
     <div *ngIf="num == 1">
-      <h1>Mes commandes</h1>
+      <h1 class="title">Mes commandes</h1>
     </div>
     <div *ngIf="num == 2">
-      <h1>Mes adresses</h1>
-    </div>
-    <div *ngIf="num == 3">
-      <h1>Mes moyens de paiement</h1>
-    </div>
-    <div *ngIf="num == 4">
-      <h1>Mon compte</h1>
-      <p>Affichez et éditez vos informations personnelles ci-dessous.</p>
-      <mat-divider></mat-divider>
-      <div>
-        <mat-label>E-mail de connexion</mat-label>
-        <div class="mail-connexion">
-          <p>mail.compte@goodfood.com</p>
-          <mat-icon>info</mat-icon>
-        </div>
-      </div>
-      <div>
+      <h1 class="title">Mes adresses</h1>
+      <p class="form-info">Affichez et éditez vos adresses ci-dessous.</p>
+      <form class="form-info">
         <div>
-          <mat-form-field class="div-full-width" appearance="fill">
-            <mat-label>Prénom</mat-label>
-            <input matInput>
-            <mat-icon matSuffix></mat-icon>
-          </mat-form-field>
-          <mat-form-field class="div-full-width" appearance="fill">
-            <mat-label>Nom de famille</mat-label>
-            <input matInput>
-            <mat-icon matSuffix></mat-icon>
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field class="div-full-width" appearance="fill">
-            <mat-label>E-mail de contact</mat-label>
-            <input matInput>
-            <mat-icon matSuffix>mail</mat-icon>
+          <mat-form-field appearance="fill">
+            <mat-label>Ligne 1</mat-label>
+            <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
           </mat-form-field>
           <mat-form-field appearance="fill">
-            <mat-label>Téléphone</mat-label>
-            <input matInput>
-            <mat-icon matSuffix>phone</mat-icon>
+            <mat-label>Ligne 2</mat-label>
+            <textarea matInput></textarea>
           </mat-form-field>
+          <table cellspacing="0"><tr>
+            <td><mat-form-field appearance="fill">
+              <mat-label>Ville</mat-label>
+              <input matInput placeholder="Ex. San Francisco">
+            </mat-form-field></td>
+            <td><mat-form-field appearance="fill">
+              <mat-label>Code postal</mat-label>
+              <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+              <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+            </mat-form-field></td>
+          </tr></table>
         </div>
+        <div class="button-info">
+          <button mat-raised-button class="b-grey c-white">Actualiser les infos</button>
+        </div>
+      </form>
+      <mat-divider></mat-divider>
+      <h1 class="title">Ajouter une adresse</h1>
+      <div class="form-info">
+        <button mat-fab class="c-white b-grey">
+          <mat-icon>add</mat-icon>
+        </button>
       </div>
+    </div>
+    <div *ngIf="num == 3">
+      <h1 class="title">Mes moyens de paiement</h1>
+    </div>
+    <div *ngIf="num == 4">
+      <h1 class="title">Mon compte</h1>
+      <p class="form-info">Affichez et éditez vos informations personnelles ci-dessous.</p>
+      <mat-divider></mat-divider>
+        <form class="form-info">
+          <div>
+            <mat-form-field class="div-full-width" appearance="fill">
+              <mat-label>Prénom</mat-label>
+              <input matInput>
+              <mat-icon matSuffix></mat-icon>
+            </mat-form-field>
+            <mat-form-field class="div-full-width" appearance="fill">
+              <mat-label>Nom de famille</mat-label>
+              <input matInput>
+              <mat-icon matSuffix></mat-icon>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="div-full-width" appearance="fill">
+              <mat-label>E-mail</mat-label>
+              <input matInput>
+              <mat-icon matSuffix>mail</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Téléphone</mat-label>
+              <input matInput>
+              <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+          </div>
+          <div class="button-info">
+            <button mat-raised-button class="b-grey c-white">Actualiser les infos</button>
+          </div>
+        </form>
     </div>
   </div>
 </div>
