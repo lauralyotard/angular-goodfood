@@ -28,6 +28,7 @@ import {LocationComponent} from './location/location.component';
 import {FooterComponent} from './footer/footer.component';
 import {RestaurantService} from './config/service';
 import {ConnexionComponent} from './connexion/connexion.component';
+import {SignupComponent} from './signup/signup.component';
 import {AccountComponent} from "./compte/account.component";
 
 @NgModule({
@@ -43,6 +44,7 @@ import {AccountComponent} from "./compte/account.component";
     HomeComponent,
     FooterComponent,
     ConnexionComponent,
+    SignupComponent,
     AccountComponent
   ],
   imports: [
