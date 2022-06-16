@@ -17,10 +17,29 @@
   <div class="d-left">
     <div *ngIf="num == 1">
       <h1 class="title">Mes commandes</h1>
+      <table class="max-size tab">
+        <thead>
+        <th>Numero de commande</th>
+        <th>Prix total</th>
+        <th>Description</th>
+        <th>Action</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let receipt of myReceipts">
+          <td>{{receipt.num}}</td>
+          <th>{{receipt.price}}e</th>
+          <td>{{receipt.desc}}</td>
+          <td class="align-icon">
+            <a><mat-icon>remove_red_eye</mat-icon></a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
     </div>
     <div *ngIf="num == 2">
       <h1 class="title">Mes adresses</h1>
       <p class="form-info">Affichez et éditez vos adresses ci-dessous.</p>
+      <mat-divider></mat-divider>
       <form class="form-info">
         <div>
           <mat-form-field appearance="fill">
@@ -57,6 +76,58 @@
     </div>
     <div *ngIf="num == 3">
       <h1 class="title">Mes moyens de paiement</h1>
+      <p class="form-info">Affichez et éditez vos adresses ci-dessous.</p>
+      <mat-divider></mat-divider>
+      <form class="form-info">
+        <table class="max-size tab">
+          <thead>
+            <th>Numero</th>
+            <th>Nom</th>
+            <th>Date d'expiration</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>XXXX XXXX XXXX X324</td>
+              <th>Camille Dupont</th>
+              <td>02/27</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="button-info">
+          <button mat-raised-button class="b-grey c-white">Supprimer</button>
+        </div>
+      </form>
+      <mat-divider></mat-divider>
+      <h1 class="title">Ajouter un moyen de paiement</h1>
+      <div class="form-info">
+        <button mat-fab class="c-white b-grey">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      <div class="marg1">
+        <mat-form-field appearance="fill">
+          <mat-label>Numero</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Code</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Date d'expiration</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+      <div class="marg1">
+        <mat-form-field appearance="fill">
+          <mat-label>Nom</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Prénom</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
     </div>
     <div *ngIf="num == 4">
       <h1 class="title">Mon compte</h1>

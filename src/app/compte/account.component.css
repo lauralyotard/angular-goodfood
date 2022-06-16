@@ -26,6 +26,10 @@
 .marg2 {
   margin: 2em;
 }
+
+.marg1 mat-form-field{
+  margin: 1em;
+}
 /*****************Header****************/
 /*****************Sidebar****************/
 @media (max-width: 599px) {
@@ -110,3 +114,25 @@
   margin-left: 1em;
 }
 /*****************info****************/
+/*************tab**********************/
+.tab th{
+  height: 3em;
+  border: 1px solid black;
+}
+
+.tab {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 2em;
+  width: 90%;
+}
+
+.tab td {
+  height: 3em;
+  border: 1px solid black;
+}
+
+.align-icon {
+  text-align: center;
+}
+/*************tab**********************/
