@@ -1,8 +1,13 @@
 
+<<<<<<< HEAD
 
 body{
     min-height: 100%;
     padding-left: 1%;
+=======
+body{
+ padding-left: 1%;
+>>>>>>> T12
 }
 h2{
     padding-left: 1%;
@@ -13,4 +18,10 @@ h3{
 h4{
     padding-left: 3%;
 }
+<<<<<<< HEAD
+=======
+component{
+    padding: auto;
+}
+>>>>>>> T12
 
