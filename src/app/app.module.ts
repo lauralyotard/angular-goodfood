@@ -17,6 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
+import {AvatarModule} from 'ngx-avatar';
 
 import { AppComponent } from './app.component';
 import {PizzalistComponent} from './pizzaList/pizzaList.component';
@@ -29,6 +30,7 @@ import {FooterComponent} from './footer/footer.component';
 import {RestaurantService} from './config/service';
 import {ConnexionComponent} from './connexion/connexion.component';
 import {AccountComponent} from "./compte/account.component";
+import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import {AccountComponent} from "./compte/account.component";
     HomeComponent,
     FooterComponent,
     ConnexionComponent,
-    AccountComponent
+    AccountComponent,
+    CgvMentionsComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ import {AccountComponent} from "./compte/account.component";
     }),
     HttpClientModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    AvatarModule
   ],
   providers: [ RestaurantService ],
   bootstrap: [AppComponent]

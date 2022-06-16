@@ -1,3 +1,40 @@
-<div class="b-lightcream login">
-page de compte profil
+<div class="b-lightcream d-c-flex">
+  <div class="b-grey d-right">
+    <div class="idendity">
+      <div class="edit-button">
+        <ngx-avatar size="100" src="https://thispersondoesnotexist.com/image"></ngx-avatar>
+        <mat-icon class="c-purple">edit</mat-icon>
+      </div>
+      <h3 class="profil-title">Camille Dupont</h3>
+    </div>
+    <div class="navbar-profil c-purple">
+      <p><a class="link-style" (click)="showPage(1)">Mes commandes</a></p>
+      <p><a class="link-style" (click)="showPage(2)">Mes adresses</a></p>
+      <p><a class="link-style" (click)="showPage(3)">Mes moyens de paiement</a></p>
+      <p><a class="link-style" (click)="showPage(4)">Mes informations</a></p>
+    </div>
+  </div>
+  <div class="b-redbrown d-left">
+    <div *ngIf="num == 1">
+      <h1>Mes commandes</h1>
+    </div>
+    <div *ngIf="num == 2">
+      <h1>Mes adresses</h1>
+    </div>
+    <div *ngIf="num == 3">
+      <h1>Mes moyens de paiement</h1>
+    </div>
+    <div *ngIf="num == 4">
+      <h1>Mon compte</h1>
+      <p>Affichez et éditez vos informations personnelles ci-dessous.</p>
+      <mat-divider></mat-divider>
+      <div>
+        <mat-label>E-mail de connexion</mat-label>
+        <div class="mail-connexion">
+          <p>mail.compte@goodfood.com</p>
+          <mat-icon>info</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

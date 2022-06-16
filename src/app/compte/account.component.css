@@ -49,7 +49,6 @@
   }
 }
 /*****************Sidebar****************/
-
 .mail-connexion {
   display: flex;
 }
@@ -65,3 +64,33 @@
 .d-left {
   width: 150%;
 }
+/*****************LEFT zone****************/
+.idendity {
+  margin: 2em;
+  padding: 1em;
+  border: 2px solid black;
+}
+
+.edit-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profil-title {
+  margin-top: 2em;
+  font-weight: bold;
+}
+/*****************LEFT zone****************/
+/*****************RIGHT zone****************/
+.navbar-profil {
+  margin: 2em;
+  padding: 1em;
+  border: 2px solid black;
+}
+
+.link-style {
+  font-style: italic;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*****************RIGHT zone****************/

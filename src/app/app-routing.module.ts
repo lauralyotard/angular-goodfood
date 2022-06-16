@@ -9,6 +9,7 @@ import {LocationComponent} from './location/location.component';
 import {FooterComponent} from './footer/footer.component';
 import {ConnexionComponent} from './connexion/connexion.component';
 import {AccountComponent} from "./compte/account.component";
+import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
 
 const routes: Routes = [
   { path: '',   redirectTo: 'app-home', pathMatch: 'full' },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'app-location', component: LocationComponent },
   { path: 'app-connexion', component: ConnexionComponent },
   { path: 'app-account', component: AccountComponent },
+  { path: 'app-cgv-mentions', component: CgvMentionsComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
