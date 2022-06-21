@@ -44,7 +44,7 @@
         <div>
           <mat-form-field appearance="fill">
             <mat-label>Ligne 1</mat-label>
-            <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+            <textarea matInput></textarea>
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Ligne 2</mat-label>
@@ -53,11 +53,11 @@
           <table cellspacing="0"><tr>
             <td><mat-form-field appearance="fill">
               <mat-label>Ville</mat-label>
-              <input matInput placeholder="Ex. San Francisco">
+              <input matInput>
             </mat-form-field></td>
             <td><mat-form-field appearance="fill">
               <mat-label>Code postal</mat-label>
-              <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+              <input matInput #postalCode maxlength="5">
               <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
             </mat-form-field></td>
           </tr></table>
