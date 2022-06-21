@@ -35,6 +35,6 @@ export class PizzalistComponent implements OnInit {
 export interface pizzaList{
   name:string;
   price: number;
-  img: string;
+  image: string;
   description:string;
 }
