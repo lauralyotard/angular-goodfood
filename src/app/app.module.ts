@@ -47,7 +47,7 @@ import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
     FooterComponent,
     ConnexionComponent,
     AccountComponent,
-    CgvMentionsComponent
+    CgvMentionsComponent,
     SignupComponent,
     AccountComponent
   ],
