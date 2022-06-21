@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {RestaurantService} from '../config/service';
 
 @Component({
   selector: 'app-shop',
@@ -6,25 +7,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent {
-  public lesPizzas:pizzaList[] = [
-    {name: 'Pizza Forestiere', price: 10, desc: 'Sauce tomate, mozzarella, bacon, jambon & champignons'},
-    {name: 'Pizza Forestiere', price: 10, desc: 'Sauce tomate, mozzarella, bacon, jambon & champignons'},
-    {name: 'Pizza American', price: 12, desc: 'Sauce tomate, mozzarella & pepperoni'},
-    {name: 'Pizza American', price: 12, desc: 'Sauce tomate, mozzarella & pepperoni'},
-    {name: 'Pizza American', price: 12, desc: 'Sauce tomate, mozzarella & pepperoni'},
-    {name: 'Pizza Margherita', price: 11, desc: 'Sauce tomate, mozzarella, extra mozzarella & origan'},
-    {name: 'Pizza Margherita', price: 11, desc: 'Sauce tomate, mozzarella, extra mozzarella & origan'},
-    {name: 'Pizza Margherita', price: 11, desc: 'Sauce tomate, mozzarella, extra mozzarella & origan'},
-    {name: 'Pizza Margherita', price: 11, desc: 'Sauce tomate, mozzarella, extra mozzarella & origan'},
-    {name: 'Pizza Margherita', price: 11, desc: 'Sauce tomate, mozzarella, extra mozzarella & origan'},
-    {name: 'Pizza Margherita', price: 11, desc: 'Sauce tomate, mozzarella, extra mozzarella & origan'},
-    {name: 'Pizza Margherita', price: 11, desc: 'Sauce tomate, mozzarella, extra mozzarella & origan'},
-    {name: 'Pizza Margherita', price: 11, desc: 'Sauce tomate, mozzarella, extra mozzarella & origan'},
-  ];
+  public loaded: boolean = false;
+  public lesPizzas:pizzaList[] = [];
+
+  constructor(private restaurantService: RestaurantService) {}
+
+  ngOnInit(): void {
+    this.getPizzasShop();
+  }
+
+  getPizzasShop(): void {
+    this.loaded = true;
+    this.restaurantService.getPizzas(1)
+      .subscribe(
+        (data: any) => {
+          console.log(data.data)
+          this.lesPizzas = data.data
+          this.loaded = false;
+        });
+  }
 }
 
 export interface pizzaList{
   name:string;
   price: number;
-  desc:string;
+  img: string;
+  description: string;
 }
