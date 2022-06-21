@@ -8,6 +8,7 @@ import {ShopComponent} from './shop/shop.component';
 import {LocationComponent} from './location/location.component';
 import {FooterComponent} from './footer/footer.component';
 import {ConnexionComponent} from './connexion/connexion.component';
+import {SignupComponent} from './signup/signup.component';
 import {AccountComponent} from "./compte/account.component";
 import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'app-shop', component: ShopComponent },
   { path: 'app-location', component: LocationComponent },
   { path: 'app-connexion', component: ConnexionComponent },
+  { path: 'app-signup', component: SignupComponent },
   { path: 'app-account', component: AccountComponent },
   { path: 'app-cgv-mentions', component: CgvMentionsComponent },
   { path: '**', component: PageNotFoundComponent },
