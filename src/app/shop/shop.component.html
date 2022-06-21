@@ -1,21 +1,26 @@
 <h2 class="mat-title title-space">Mon panier</h2>
-<table class="max-size">
-  <thead>
-  <th></th>
-  <th>Nom</th>
-  <th>Prix</th>
-  <th>Description</th>
-  <th></th>
-  </thead>
-  <tbody>
-  <tr *ngFor="let pizza of lesPizzas">
-    <td class="td-space"><img src="assets/img/{{pizza.img}}.png" class="img-tab-size"/></td>
-    <td>{{pizza.name}}</td>
-    <th>{{pizza.price}}e</th>
-    <td>{{pizza.description}}</td>
-    <td>
-      <a><mat-icon>edit</mat-icon></a>
-      <a><mat-icon>delete</mat-icon></a></td>
-  </tr>
-  </tbody>
-</table>
+<div *ngIf="lesPizzas.length == 0">
+  <h3 class="title-center">Aucun article dans le panier.</h3>
+</div>
+<div *ngIf="lesPizzas.length > 0">
+  <table class="max-size">
+    <thead>
+    <th></th>
+    <th>Nom</th>
+    <th>Prix</th>
+    <th>Description</th>
+    <th></th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let pizza of lesPizzas">
+      <td class="td-space"><img src="assets/img/{{pizza.img}}.png" class="img-tab-size"/></td>
+      <td>{{pizza.name}}</td>
+      <th>{{pizza.price}}e</th>
+      <td>{{pizza.description}}</td>
+      <td>
+        <a><mat-icon>edit</mat-icon></a>
+        <a><mat-icon>delete</mat-icon></a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
