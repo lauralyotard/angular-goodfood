@@ -55,6 +55,7 @@
 
 .d-c-flex {
   display: flex;
+  min-height: 86vh;
 }
 
 .d-right {
