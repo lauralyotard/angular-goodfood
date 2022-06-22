@@ -10,7 +10,6 @@
   margin-top: 3em;
 }
 /*****************Logo*****************/
-
 /*****************Header****************/
 .d-flex {
   display: flex;
@@ -26,6 +25,10 @@
 
 .marg2 {
   margin: 2em;
+}
+
+.marg1 mat-form-field{
+  margin: 1em;
 }
 /*****************Header****************/
 /*****************Sidebar****************/
@@ -66,7 +69,7 @@
   width: 150%;
 }
 /*****************LEFT zone****************/
-.idendity {
+.identity {
   margin: 2em;
   padding: 1em;
   border: 2px solid black;
@@ -95,3 +98,42 @@
   cursor: pointer;
 }
 /*****************RIGHT zone****************/
+/*****************info****************/
+.form-info {
+  margin: 2em;
+}
+
+.title {
+  margin: 1em;
+}
+
+.button-info {
+  margin: 1em;
+}
+
+.form-info div mat-form-field {
+  margin-left: 1em;
+}
+/*****************info****************/
+/*************tab**********************/
+.tab th{
+  height: 3em;
+  border: 1px solid black;
+}
+
+.tab {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 2em;
+  width: 90%;
+}
+
+.tab td {
+  height: 3em;
+  border: 1px solid black;
+}
+
+.align-icon {
+  text-align: center;
+}
+/*************tab**********************/
