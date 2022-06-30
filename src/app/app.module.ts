@@ -35,6 +35,7 @@ import {
   AccountComponent,
   DialogAdresseComponent,
   DialogCommandesComponent,
+  DialogNameComponent,
   DialogPayComponent
 } from './compte/account.component';
 import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
@@ -57,7 +58,8 @@ import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
     SignupComponent,
     DialogCommandesComponent,
     DialogPayComponent,
-    DialogAdresseComponent
+    DialogAdresseComponent,
+    DialogNameComponent
   ],
   imports: [
     BrowserModule,

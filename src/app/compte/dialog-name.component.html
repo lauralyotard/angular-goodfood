@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Modifier mes informations personnelles</h2>
+<mat-dialog-content class="mat-typography">
+  <form class="form-info">
+    <div>
+      <mat-form-field style="margin-right: 1em" appearance="fill">
+        <mat-label>Nom</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Prenom</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Annuler</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Valider</button>
+</mat-dialog-actions>

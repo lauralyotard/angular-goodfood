@@ -3,7 +3,7 @@
     <div class="identity">
       <div class="edit-button">
         <ngx-avatar size="100" src="https://thispersondoesnotexist.com/image"></ngx-avatar>
-        <mat-icon class="c-purple">edit</mat-icon>
+        <a (click)="openDialogName()"><mat-icon class="c-purple click">edit</mat-icon></a>
       </div>
       <h3 class="profil-title">Camille Dupont</h3>
     </div>
@@ -69,9 +69,11 @@
       <mat-divider></mat-divider>
       <h1 class="title">Ajouter une adresse</h1>
       <div class="form-info">
-        <button mat-fab class="c-white b-grey">
-          <a (click)="openDialogAdresse()"><mat-icon>add</mat-icon></a>
-        </button>
+        <a (click)="openDialogAdresse()">
+          <button mat-fab class="c-white b-grey">
+            <mat-icon>add</mat-icon>
+          </button>
+        </a>
       </div>
     </div>
     <div *ngIf="num == 3">
@@ -100,33 +102,11 @@
       <mat-divider></mat-divider>
       <h1 class="title">Ajouter un moyen de paiement</h1>
       <div class="form-info">
-        <button mat-fab class="c-white b-grey">
-          <a (click)="openDialogPay()"><mat-icon>add</mat-icon></a>
-        </button>
-      </div>
-      <div class="marg1">
-        <mat-form-field appearance="fill">
-          <mat-label>Numero</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Code</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Date d'expiration</mat-label>
-          <input matInput>
-        </mat-form-field>
-      </div>
-      <div class="marg1">
-        <mat-form-field appearance="fill">
-          <mat-label>Nom</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Prénom</mat-label>
-          <input matInput>
-        </mat-form-field>
+        <a (click)="openDialogPay()">
+          <button mat-fab class="c-white b-grey">
+            <mat-icon>add</mat-icon>
+          </button>
+        </a>
       </div>
     </div>
     <div *ngIf="num == 4">
