@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-account',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent {
+  constructor(public dialog: MatDialog) {}
   public myReceipts:receiptList[] = [
     {num: '3A192374', price: 22, desc: 'P-Reine ; P-Saumon'},
     {num: '4Z218463', price: 18, desc: 'P-Raclette'},
@@ -49,6 +51,29 @@ export class AccountComponent {
       }
     }
   }
+  openDialogCommandes() {
+    const dialogRef = this.dialog.open(DialogCommandesComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  openDialogAdresse() {
+    const dialogRef = this.dialog.open(DialogAdresseComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  openDialogPay() {
+    const dialogRef = this.dialog.open(DialogPayComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }
 
 export interface receiptList{
@@ -56,3 +81,21 @@ export interface receiptList{
   price: number;
   desc:string;
 }
+
+@Component({
+  selector: 'app-dialog-commandes',
+  templateUrl: 'dialog-commandes.component.html',
+})
+export class DialogCommandesComponent {}
+
+@Component({
+  selector: 'app-dialog-adresse',
+  templateUrl: 'dialog-adresse.component.html',
+})
+export class DialogAdresseComponent {}
+
+@Component({
+  selector: 'app-dialog-pay',
+  templateUrl: 'dialog-pay.component.html',
+})
+export class DialogPayComponent {}
