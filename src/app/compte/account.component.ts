@@ -74,14 +74,6 @@ export class AccountComponent {
       console.log(`Dialog result: ${result}`);
     });
   }
-
-  openDialogName() {
-    const dialogRef = this.dialog.open(DialogNameComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
 }
 
 export interface receiptList{
@@ -107,9 +99,3 @@ export class DialogAdresseComponent {}
   templateUrl: 'dialog-pay.component.html',
 })
 export class DialogPayComponent {}
-
-@Component({
-  selector: 'app-dialog-name',
-  templateUrl: 'dialog-name.component.html',
-})
-export class DialogNameComponent {}
