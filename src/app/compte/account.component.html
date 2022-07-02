@@ -39,32 +39,26 @@
       <h1 class="title">Mes adresses</h1>
       <p class="form-info">Affichez et éditez vos adresses ci-dessous.</p>
       <mat-divider></mat-divider>
-      <form class="form-info">
-        <div>
-          <mat-form-field appearance="fill">
-            <mat-label>Ligne 1</mat-label>
-            <input matInput>
-          </mat-form-field>
-          <mat-form-field appearance="fill">
-            <mat-label>Ligne 2</mat-label>
-            <input matInput>
-          </mat-form-field>
-          <table cellspacing="0"><tr>
-            <td><mat-form-field appearance="fill">
-              <mat-label>Ville</mat-label>
-              <input matInput>
-            </mat-form-field></td>
-            <td><mat-form-field appearance="fill">
-              <mat-label>Code postal</mat-label>
-              <input matInput #postalCode maxlength="5">
-              <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-            </mat-form-field></td>
-          </tr></table>
-        </div>
-        <div class="button-info">
-          <button mat-raised-button class="b-grey c-white">Actualiser les infos</button>
-        </div>
-      </form>
+        <table class="max-size tab">
+          <thead>
+          <th>Ligne 1</th>
+          <th>Ligne 2</th>
+          <th>Ville</th>
+          <th>Code postal</th>
+          <th>Action</th>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Ligne1</td>
+            <td>Ligne2</td>
+            <td>Ville</td>
+            <td>Code</td>
+            <td class="align-icon">
+              <button mat-button><mat-icon>delete</mat-icon></button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
       <mat-divider></mat-divider>
       <h1 class="title">Ajouter une adresse</h1>
       <div class="form-info">
@@ -79,7 +73,7 @@
       <h1 class="title">Mes moyens de paiement</h1>
       <p class="form-info">Affichez et éditez vos adresses ci-dessous.</p>
       <mat-divider></mat-divider>
-      <form class="form-info">
+      <form>
         <table class="max-size tab">
           <thead>
             <th>Numero</th>
@@ -90,7 +84,7 @@
           <tbody>
             <tr>
               <td>XXXX XXXX XXXX X324</td>
-              <th>Camille Dupont</th>
+              <td>Camille Dupont</td>
               <td>02/27</td>
               <td class="align-icon">
                 <button mat-button><mat-icon>delete</mat-icon></button>

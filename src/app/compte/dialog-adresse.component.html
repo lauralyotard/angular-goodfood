@@ -1,6 +1,28 @@
 <h2 mat-dialog-title>Modifier mes adresses</h2>
 <mat-dialog-content class="mat-typography">
- adresse
+  <form class="form-info">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Ligne 1</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Ligne 2</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <table cellspacing="0"><tr>
+        <td><mat-form-field appearance="fill">
+          <mat-label>Ville</mat-label>
+          <input matInput>
+        </mat-form-field></td>
+        <td><mat-form-field appearance="fill">
+          <mat-label>Code postal</mat-label>
+          <input matInput #postalCode maxlength="5">
+          <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+        </mat-form-field></td>
+      </tr></table>
+    </div>
+  </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Annuler</button>
