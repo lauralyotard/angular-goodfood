@@ -3,7 +3,6 @@
     <div class="identity">
       <div class="edit-button">
         <ngx-avatar size="100" src="https://thispersondoesnotexist.com/image"></ngx-avatar>
-        <mat-icon class="c-purple">edit</mat-icon>
       </div>
       <h3 class="profil-title">Camille Dupont</h3>
     </div>
@@ -30,7 +29,7 @@
           <th>{{receipt.price}}e</th>
           <td>{{receipt.desc}}</td>
           <td class="align-icon">
-            <a><mat-icon>remove_red_eye</mat-icon></a>
+            <button mat-button (click)="openDialogCommandes()"><mat-icon>remove_red_eye</mat-icon></button>
           </td>
         </tr>
         </tbody>
@@ -40,93 +39,68 @@
       <h1 class="title">Mes adresses</h1>
       <p class="form-info">Affichez et éditez vos adresses ci-dessous.</p>
       <mat-divider></mat-divider>
-      <form class="form-info">
-        <div>
-          <mat-form-field appearance="fill">
-            <mat-label>Ligne 1</mat-label>
-            <textarea matInput></textarea>
-          </mat-form-field>
-          <mat-form-field appearance="fill">
-            <mat-label>Ligne 2</mat-label>
-            <textarea matInput></textarea>
-          </mat-form-field>
-          <table cellspacing="0"><tr>
-            <td><mat-form-field appearance="fill">
-              <mat-label>Ville</mat-label>
-              <input matInput>
-            </mat-form-field></td>
-            <td><mat-form-field appearance="fill">
-              <mat-label>Code postal</mat-label>
-              <input matInput #postalCode maxlength="5">
-              <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-            </mat-form-field></td>
-          </tr></table>
-        </div>
-        <div class="button-info">
-          <button mat-raised-button class="b-grey c-white">Actualiser les infos</button>
-        </div>
-      </form>
+        <table class="max-size tab">
+          <thead>
+          <th>Ligne 1</th>
+          <th>Ligne 2</th>
+          <th>Ville</th>
+          <th>Code postal</th>
+          <th>Action</th>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Ligne1</td>
+            <td>Ligne2</td>
+            <td>Ville</td>
+            <td>Code</td>
+            <td class="align-icon">
+              <button mat-button><mat-icon>delete</mat-icon></button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
       <mat-divider></mat-divider>
       <h1 class="title">Ajouter une adresse</h1>
       <div class="form-info">
-        <button mat-fab class="c-white b-grey">
-          <mat-icon>add</mat-icon>
-        </button>
+        <a (click)="openDialogAdresse()">
+          <button mat-fab class="c-white b-grey">
+            <mat-icon>add</mat-icon>
+          </button>
+        </a>
       </div>
     </div>
     <div *ngIf="num == 3">
       <h1 class="title">Mes moyens de paiement</h1>
       <p class="form-info">Affichez et éditez vos adresses ci-dessous.</p>
       <mat-divider></mat-divider>
-      <form class="form-info">
+      <form>
         <table class="max-size tab">
           <thead>
             <th>Numero</th>
             <th>Nom</th>
             <th>Date d'expiration</th>
+            <th>Actions</th>
           </thead>
           <tbody>
             <tr>
               <td>XXXX XXXX XXXX X324</td>
-              <th>Camille Dupont</th>
+              <td>Camille Dupont</td>
               <td>02/27</td>
+              <td class="align-icon">
+                <button mat-button><mat-icon>delete</mat-icon></button>
+              </td>
             </tr>
           </tbody>
         </table>
-        <div class="button-info">
-          <button mat-raised-button class="b-grey c-white">Supprimer</button>
-        </div>
       </form>
       <mat-divider></mat-divider>
       <h1 class="title">Ajouter un moyen de paiement</h1>
       <div class="form-info">
-        <button mat-fab class="c-white b-grey">
-          <mat-icon>add</mat-icon>
-        </button>
-      </div>
-      <div class="marg1">
-        <mat-form-field appearance="fill">
-          <mat-label>Numero</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Code</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Date d'expiration</mat-label>
-          <input matInput>
-        </mat-form-field>
-      </div>
-      <div class="marg1">
-        <mat-form-field appearance="fill">
-          <mat-label>Nom</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Prénom</mat-label>
-          <input matInput>
-        </mat-form-field>
+        <a (click)="openDialogPay()">
+          <button mat-fab class="c-white b-grey">
+            <mat-icon>add</mat-icon>
+          </button>
+        </a>
       </div>
     </div>
     <div *ngIf="num == 4">
