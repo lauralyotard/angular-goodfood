@@ -44,11 +44,11 @@
         <div>
           <mat-form-field appearance="fill">
             <mat-label>Ligne 1</mat-label>
-            <textarea matInput></textarea>
+            <input matInput>
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Ligne 2</mat-label>
-            <textarea matInput></textarea>
+            <input matInput>
           </mat-form-field>
           <table cellspacing="0"><tr>
             <td><mat-form-field appearance="fill">
@@ -86,12 +86,16 @@
             <th>Numero</th>
             <th>Nom</th>
             <th>Date d'expiration</th>
+            <th>Actions</th>
           </thead>
           <tbody>
             <tr>
               <td>XXXX XXXX XXXX X324</td>
               <th>Camille Dupont</th>
               <td>02/27</td>
+              <td class="align-icon">
+                <button mat-button><mat-icon>delete</mat-icon></button>
+              </td>
             </tr>
           </tbody>
         </table>

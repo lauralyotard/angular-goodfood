@@ -1,6 +1,39 @@
 <h2 mat-dialog-title>Modifier mon moyen de paiement</h2>
 <mat-dialog-content class="mat-typography">
- pay
+  <form class="form-info">
+    <div>
+      <mat-form-field style="margin-right: 0.2em" appearance="fill">
+        <mat-label>Nom</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Prenom</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <table cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field appearance="fill">
+              <mat-label>Numero</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field appearance="fill">
+              <mat-label>Date d'expiration</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field appearance="fill">
+              <mat-label>Code</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Annuler</button>
