@@ -22,7 +22,6 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "ngx-avatar": "^4.1.0",
-    "node": "^17.7.2",
     "nodejs": "0.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
