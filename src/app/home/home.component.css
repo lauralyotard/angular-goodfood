@@ -29,64 +29,77 @@
 }
 /*****************Header****************/
 
-#first-img {
-  width: 50%;
+#content {
+  width: 100%;
 }
 
-#second-img {
-  width: 50%;
-}
-
-#parent-shape {
-  width: 40%;
-  height: 13em;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 2%;
-  margin-top: 12%;
-  margin-left: 28%;
-}
-
-#parent-text {
-  font-family: bold;
-  padding-left: 12em;
-  padding-bottom: 2em;
-}
-
-#first-shape {
-  width: 40%;
-  height: 6.5em;
-  background-color: orange;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 2%;
-  float:right;
+#div-title {
+  min-height: 15vh;
   display: flex;
-  justify-content: center;
 }
 
-#first-text {
-  color: #FFFFFF;
-  float:right;
-  font-family: bold;
-  padding-top: 3em;
+#title {
+  margin: auto;
+  font-size: 2em;
 }
 
-#second-shape {
-  width: 40%;
-  height: 6.5em;
-  background-color: saddlebrown;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 2%;
+#background {
+  width: 100%;
+  background-image: url('../../assets/img/home-background.png');
+  position: absolute;
+}
+
+.div-buttons {
+  width: 100%;
+}
+
+#div-1 {
+  width: 50%;
+  float: left;
+}
+
+#div-2 {
+  width: 50%;
+  float: right;
+}
+
+.choice {
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+
+#take-away {
+  margin-left: 25em;
+  margin-right: 5em;
+}
+
+#delivery {
+  margin-left: 5em;
+  margin-right: 25em;
+}
+
+.buttons {
   display: flex;
-  justify-content: center;
+  border: 0.5em solid white;
+  border-radius: 1em;
 }
 
-#second-text {
-  color: #FFFFFF;
-  float:right;
-  font-family: bold;
-  padding-top: 3em;
+.links {
+  text-decoration: none;
+  text-align: center;
+}
+
+.buttons:hover {
+  background-color: #3A0176;
+}
+
+.img-size {
+  width: 10em;
+}
+
+.text {
+  width: 75%;
+  margin: auto;
+  color: white;
+  font-size: 2em;
 }
