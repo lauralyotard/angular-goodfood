@@ -19,6 +19,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {AvatarModule} from 'ngx-avatar';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
 import {PizzalistComponent} from './pizzaList/pizzaList.component';
@@ -80,7 +81,8 @@ import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
     MatFormFieldModule,
     MatInputModule,
     AvatarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
   ],
   providers: [ RestaurantService ],
   bootstrap: [AppComponent]
