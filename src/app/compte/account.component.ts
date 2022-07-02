@@ -11,8 +11,6 @@ export class AccountComponent {
   public myReceipts:receiptList[] = [
     {num: '3A192374', price: 22, desc: 'P-Reine ; P-Saumon'},
     {num: '4Z218463', price: 18, desc: 'P-Raclette'},
-    {num: '9W821367', price: 42, desc: 'P-Saumon ; P-Raclettex2 ; P-Champignons ; P-Reine ; P-Chorizo'},
-    {num: '7U237432', price: 28, desc: 'P-Forestiere ; P-Reinex2 ; P-Raclette ; P-Saumon'},
   ];
 
   num: number = 1;

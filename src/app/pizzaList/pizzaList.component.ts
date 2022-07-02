@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {RestaurantService} from '../config/service';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-pizzaList',
@@ -11,7 +12,7 @@ export class PizzalistComponent implements OnInit {
   public lesPizzas:pizzaList[] = [];
   public loaded: boolean = false;
 
-  constructor(private restaurantService: RestaurantService, private _snackBar: MatSnackBar) {}
+  constructor(private restaurantService: RestaurantService, private _snackBar: MatSnackBar, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.getPizzas();
@@ -20,6 +21,14 @@ export class PizzalistComponent implements OnInit {
   openSnackBar() {
     this._snackBar.open("Pizza ajoutée !", "Fermer", {
       duration: 3000,
+    });
+  }
+
+  openDialogAddPizza() {
+    const dialogRef = this.dialog.open(DialogAddPizzaComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
     });
   }
 
@@ -45,3 +54,9 @@ export interface pizzaList{
   image: string;
   description:string;
 }
+
+@Component({
+  selector: 'app-dialog-add-pizza',
+  templateUrl: 'dialog-addpizza.component.html',
+})
+export class DialogAddPizzaComponent {}
