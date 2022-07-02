@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
+import {Component, Inject} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-account',
@@ -52,7 +52,12 @@ export class AccountComponent {
     }
   }
   openDialogCommandes() {
-    const dialogRef = this.dialog.open(DialogCommandesComponent);
+    const dialogRef = this.dialog.open(DialogCommandesComponent, {
+      data: {
+        //A refaire
+          num: this.myReceipts[0].num
+      },
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
@@ -86,7 +91,9 @@ export interface receiptList{
   selector: 'app-dialog-commandes',
   templateUrl: 'dialog-commandes.component.html',
 })
-export class DialogCommandesComponent {}
+export class DialogCommandesComponent {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: receiptList) {}
+}
 
 @Component({
   selector: 'app-dialog-adresse',
