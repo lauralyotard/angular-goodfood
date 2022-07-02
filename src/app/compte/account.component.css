@@ -114,6 +114,10 @@
 .form-info div mat-form-field {
   margin-left: 1em;
 }
+
+.click {
+  cursor: pointer;
+}
 /*****************info****************/
 /*************tab**********************/
 .tab th{

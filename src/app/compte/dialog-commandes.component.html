@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>Consulter mes commandes</h2>
+<mat-dialog-content class="mat-typography">
+  <table class="max-size tab">
+    <thead>
+    <th>Numero de commande</th>
+    <th>Prix total</th>
+    <th>Description</th>
+    </thead>
+    <tbody>
+    <tr *ngIf="data.num === '3A192374'">
+      <td>{{data.num}}</td>
+      <th>{{data.price}}e</th>
+      <td>{{data.desc}}</td>
+    </tr>
+    <tr *ngIf="data.num === '4Z218463'">
+      <td>{{data.num}}</td>
+      <th>{{data.price}}e</th>
+      <td>{{data.desc}}</td>
+    </tr>
+    </tbody>
+  </table>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Fermer</button>
+</mat-dialog-actions>
