@@ -1,49 +1,4 @@
-/*****************Colors****************/
-.c-white {
-  color : #FFFFFF;
-}
-
-.b-white {
-  background-color : #FFFFFF;
-}
-
-.c-cream {
-  color : #D0A775;
-}
-
-.b-cream {
-  background-color : #D0A775;
-}
-
-.c-lightcream {
-  color : #ECE4C5;
-}
-
-.b-lightcream {
-  background-color : #ECE4C5;
-}
-
-.c-grey {
-  color : #707070;
-}
-
-.b-grey {
-  background-color : #707070;
-}
-
-.c-redbrown {
-  color : #B2451A;
-}
-
-.b-redbrown {
-  background-color : #B2451A;
-}
-
-.c-black {
-  color : #000000;
-}
-/*****************Colors****************/
-
+@import '../colors.css';
 /*****************Logo*****************/
 .logo-size {
   height: 3em;
@@ -55,7 +10,6 @@
   margin-top: 3em;
 }
 /*****************Logo*****************/
-
 /*****************Header****************/
 .d-flex {
   display: flex;
@@ -71,6 +25,10 @@
 
 .marg2 {
   margin: 2em;
+}
+
+.marg1 mat-form-field{
+  margin: 1em;
 }
 /*****************Header****************/
 /*****************Sidebar****************/
@@ -94,11 +52,92 @@
   }
 }
 /*****************Sidebar****************/
-
-.login {
-  height: 40em;
+.mail-connexion {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
+
+.d-c-flex {
+  display: flex;
+  min-height: 86vh;
+}
+
+.d-right {
+  width: 50%;
+}
+
+.d-left {
+  width: 150%;
+}
+/*****************LEFT zone****************/
+.identity {
+  margin: 2em;
+  padding: 1em;
+  border: 2px solid black;
+}
+
+.edit-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profil-title {
+  margin-top: 2em;
+  font-weight: bold;
+}
+/*****************LEFT zone****************/
+/*****************RIGHT zone****************/
+.navbar-profil {
+  margin: 2em;
+  padding: 1em;
+  border: 2px solid black;
+}
+
+.link-style {
+  font-style: italic;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*****************RIGHT zone****************/
+/*****************info****************/
+.form-info {
+  margin: 2em;
+}
+
+.title {
+  margin: 1em;
+}
+
+.button-info {
+  margin: 1em;
+}
+
+.form-info div mat-form-field {
+  margin-left: 1em;
+}
+
+.click {
+  cursor: pointer;
+}
+/*****************info****************/
+/*************tab**********************/
+.tab th{
+  height: 3em;
+  border: 1px solid black;
+}
+
+.tab {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 2em;
+  width: 90%;
+}
+
+.tab td {
+  height: 3em;
+  border: 1px solid black;
+}
+
+.align-icon {
+  text-align: center;
+}
+/*************tab**********************/

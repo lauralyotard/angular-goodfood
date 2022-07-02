@@ -1,49 +1,4 @@
-/*****************Colors****************/
-.c-white {
-  color : #FFFFFF;
-}
-
-.b-white {
-  background-color : #FFFFFF;
-}
-
-.c-cream {
-  color : #D0A775;
-}
-
-.b-cream {
-  background-color : #D0A775;
-}
-
-.c-lightcream {
-  color : #ECE4C5;
-}
-
-.b-lightcream {
-  background-color : #ECE4C5;
-}
-
-.c-grey {
-  color : #707070;
-}
-
-.b-grey {
-  background-color : #707070;
-}
-
-.c-redbrown {
-  color : #B2451A;
-}
-
-.b-redbrown {
-  background-color : #B2451A;
-}
-
-.c-black {
-  color : #000000;
-}
-/*****************Colors****************/
-
+@import 'colors.css';
 /*****************Logo*****************/
 .logo-size {
   height: 3em;
@@ -73,3 +28,7 @@
   margin: 2em;
 }
 /*****************Header****************/
+
+#min-height {
+  min-height: 86vh;
+}

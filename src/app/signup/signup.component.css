@@ -1,4 +1,5 @@
 @import '../colors.css';
+
 .div-margin {
   padding-top: 5%;
 }
@@ -7,19 +8,15 @@
   text-align: center;
 }
 
-#connexion {
+#inscription {
   background-color : #ECE4C5;
   min-height: 86vh;
 }
 
 #body {
-  padding-top: 10%;
-  margin-left: 43%;
-  margin-right: 43%;
-}
-
-#link-forget-password {
-  text-align: center;
+  padding-top: 7%;
+  margin-left: 36%;
+  margin-right: 36%;
 }
 
 .link-style {
@@ -32,6 +29,23 @@
   width: 100%;
 }
 
-#button-connexion {
-  width: 100%;
+#signup-button {
+  text-align: center;
 }
+
+#signup-link {
+  display: inline-block;
+  width: 40%;
+}
+
+#left {
+  float: left;
+  width: 45%;
+}
+
+#right {
+  float: right;
+  width: 45%;
+}
+
+
