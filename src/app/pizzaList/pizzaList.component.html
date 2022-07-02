@@ -1,4 +1,4 @@
-<button mat-raised-button class="marg05 b-redbrown">Ajouter une pizza</button>
+<a mat-raised-button class="marg05 b-redbrown" (click)="openDialogAddPizza()">Ajouter une pizza</a>
 <div class="d-flex j-content-ar marg2 r-line">
   <div *ngFor="let pizza of lesPizzas">
     <mat-card class="card-size">
