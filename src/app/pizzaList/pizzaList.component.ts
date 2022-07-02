@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {RestaurantService} from '../config/service';
+import {Service} from '../config/service';
 
 @Component({
   selector: 'app-pizzaList',
@@ -10,7 +10,7 @@ export class PizzalistComponent implements OnInit {
   public lesPizzas:pizzaList[] = [];
   public loaded: boolean = false;
 
-  constructor(private restaurantService: RestaurantService) {}
+  constructor(private restaurantService: Service) {}
 
   ngOnInit(): void {
     this.getPizzas();

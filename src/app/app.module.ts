@@ -28,7 +28,7 @@ import {HomeComponent} from './home/home.component';
 import {ShopComponent} from './shop/shop.component';
 import {LocationComponent} from './location/location.component';
 import {FooterComponent} from './footer/footer.component';
-import {RestaurantService} from './config/service';
+import {Service} from './config/service';
 import {ConnexionComponent} from './connexion/connexion.component';
 import {SignupComponent} from './signup/signup.component';
 import {
@@ -82,7 +82,7 @@ import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
     AvatarModule,
     MatDialogModule
   ],
-  providers: [ RestaurantService ],
+  providers: [ Service ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
