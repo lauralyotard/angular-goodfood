@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {RestaurantService} from '../config/service';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {RestaurantService} from '../config/service';
 
 @Component({
   selector: 'app-pizzaList',
@@ -10,7 +10,6 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 export class PizzalistComponent implements OnInit {
   public lesPizzas:pizzaList[] = [];
   public loaded: boolean = false;
-  durationInSeconds = 5;
 
   constructor(private restaurantService: RestaurantService, private _snackBar: MatSnackBar) {}
 

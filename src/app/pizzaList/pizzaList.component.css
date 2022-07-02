@@ -76,4 +76,10 @@
   margin-left: 0;
   cursor: pointer;
 }
+
+.al-bottom {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 0.2em;
+}
 /****************Pizza******************/
