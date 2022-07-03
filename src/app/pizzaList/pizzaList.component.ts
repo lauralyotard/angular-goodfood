@@ -10,7 +10,7 @@ export class PizzalistComponent implements OnInit {
   public lesPizzas:pizzaList[] = [];
   public loaded: boolean = false;
 
-  constructor(private restaurantService: Service) {}
+  constructor(private pizzaService: Service) {}
 
   ngOnInit(): void {
     this.getPizzas();
@@ -18,7 +18,7 @@ export class PizzalistComponent implements OnInit {
 
   getPizzas(): void {
     this.loaded = true;
-    this.restaurantService.getPizzas(1)
+    this.pizzaService.getPizzas(1)
       .subscribe(
         (data: any) => {
           console.log(data.data)
