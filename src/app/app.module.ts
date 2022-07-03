@@ -22,7 +22,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
-import {DialogAddPizzaComponent, PizzalistComponent} from './pizzaList/pizzaList.component';
+import {DialogAddPizzaComponent, DialogDetailPizzaComponent, PizzalistComponent} from './pizzaList/pizzaList.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {HomeComponent} from './home/home.component';
@@ -59,7 +59,8 @@ import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
     DialogCommandesComponent,
     DialogPayComponent,
     DialogAdresseComponent,
-    DialogAddPizzaComponent
+    DialogAddPizzaComponent,
+    DialogDetailPizzaComponent
   ],
   imports: [
     BrowserModule,

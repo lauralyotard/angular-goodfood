@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Détails de {{ data.name }}</h2>
+<mat-dialog-content class="mat-typography">
+  <mat-card-title>{{ data.name }}</mat-card-title>
+  <img class="pizzas-size" mat-card-image src="assets/img/{{ data.image }}.png">
+  <mat-card-subtitle>{{ data.price }} euros</mat-card-subtitle>
+  <p>{{ data.description }}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Fermer</button>
+</mat-dialog-actions>
