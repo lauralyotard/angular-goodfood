@@ -66,9 +66,10 @@ agm-map {
 }
 
 .first-card-div {
-  font-family: bold;
+  font-weight: bold;
+
 }
 
 .second-card-div, .third-card-div {
-  font-family: italic;
+  font-style: italic;
 }
