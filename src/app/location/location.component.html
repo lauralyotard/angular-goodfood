@@ -14,15 +14,16 @@
   <div id="bottom">
     <div id="left">
       <div id="map-div">
-        <agm-map
-          [latitude]='lat'
-          [longitude]='lng'
-          [zoom]="15"
+        <agm-map id="currentPosition"
+          [latitude]= latitude
+          [longitude]= longitude
+          [zoom]= zoom
           [disableDefaultUI]="true"
         >
-          <agm-marker
-            [latitude]="lat"
-            [longitude]="lng">
+          <agm-marker *ngFor="let marker of markers"
+            [latitude]="marker.lat"
+            [longitude]="marker.lng"
+          >
           </agm-marker>
         </agm-map>
       </div>
@@ -30,7 +31,7 @@
     <div id="right">
       <div id="restaurants-div">
         <div class="restaurants" *ngFor="let restaurant of restaurants">
-          <div class="restaurant-card">
+          <div class="restaurant-card" (click)="focusOn(restaurant.name)">
             <div class="first-card-div">
               <span>
                 {{ restaurant.name }}
