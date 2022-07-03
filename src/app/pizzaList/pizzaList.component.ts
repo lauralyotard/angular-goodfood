@@ -1,7 +1,7 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {RestaurantService} from '../config/service';
 import {MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
+import {Service} from '../config/service';
 
 @Component({
   selector: 'app-pizzaList',
@@ -19,7 +19,7 @@ export class PizzalistComponent implements OnInit {
   };
   public loaded: boolean = false;
 
-  constructor(private restaurantService: RestaurantService, private _snackBar: MatSnackBar, public dialog: MatDialog) {}
+  constructor(private pizzaService: Service, private _snackBar: MatSnackBar, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.getPizzas();
@@ -69,7 +69,7 @@ export class PizzalistComponent implements OnInit {
 
   getPizzas(): void {
     this.loaded = true;
-    this.restaurantService.getPizzas(1)
+    this.pizzaService.getPizzas(1)
       .subscribe(
         (data: any) => {
           this.lesPizzas = data.data

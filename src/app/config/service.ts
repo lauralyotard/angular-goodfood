@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
 @Injectable()
-export class RestaurantService {
+export class Service {
   constructor(private http: HttpClient) { }
   options: {
     headers?: HttpHeaders | { [header: string]: string | string[]; };
@@ -18,7 +18,23 @@ export class RestaurantService {
   _basePath = 'http://ec2-13-36-101-31.eu-west-3.compute.amazonaws.com';
   basePath = 'http://localhost:8000';
 
+  /* --- USERS --- */
+
+  login(email: string, password: string): Observable<object> {
+    return this.http.post(`${this.basePath}/users/login`, {
+      email, password
+    });
+  }
+
+  /* --- PIZZAS --- */
+
   getPizzas(idRestaurant: number): Observable<object> {
     return this.http.get(`${this.basePath}/restaurant/${idRestaurant}/pizzas`);
+  }
+
+  /* --- RESTAURANTS --- */
+
+  getRestaurants(): Observable<object> {
+    return this.http.get(`${this.basePath}/location`);
   }
 }

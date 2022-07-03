@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RestaurantService} from '../config/service';
+import {Service} from '../config/service';
 
 @Component({
   selector: 'app-shop',
@@ -10,7 +10,7 @@ export class ShopComponent {
   public loaded: boolean = false;
   public lesPizzas:pizzaList[] = [];
 
-  constructor(private restaurantService: RestaurantService) {}
+  constructor(private restaurantService: Service) {}
 
   ngOnInit(): void {
     this.getPizzasShop();
