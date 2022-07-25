@@ -9,10 +9,8 @@ import {MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
 export class AccountComponent {
   constructor(public dialog: MatDialog) {}
   public myReceipts:receiptList[] = [
-    {num: '3A192374', price: 22, desc: 'P-Reine ; P-Saumon'},
-    {num: '4Z218463', price: 18, desc: 'P-Raclette'},
-    {num: '9W821367', price: 42, desc: 'P-Saumon ; P-Raclettex2 ; P-Champignons ; P-Reine ; P-Chorizo'},
-    {num: '7U237432', price: 28, desc: 'P-Forestiere ; P-Reinex2 ; P-Raclette ; P-Saumon'},
+    {id: '3A192374', price: 22, desc: 'P-Reine ; P-Saumon'},
+    {id: '4Z218463', price: 18, desc: 'P-Raclette'},
   ];
 
   num: number = 1;
@@ -47,10 +45,13 @@ export class AccountComponent {
     }
   }
   openDialogCommandes() {
+    console.log(this.myReceipts[0].id);
     const dialogRef = this.dialog.open(DialogCommandesComponent, {
       data: {
         //A refaire
-          num: this.myReceipts[0].num
+        id: this.myReceipts[0].id,
+        price: this.myReceipts[0].price,
+        desc: this.myReceipts[0].desc,
       },
     });
 
@@ -77,7 +78,7 @@ export class AccountComponent {
 }
 
 export interface receiptList{
-  num:string;
+  id:string;
   price: number;
   desc:string;
 }

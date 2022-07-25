@@ -14,99 +14,40 @@
   <div id="bottom">
     <div id="left">
       <div id="map-div">
-        <agm-map
-          [latitude]='lat'
-          [longitude]='lng'
-          [zoom]="15"
+        <agm-map id="currentPosition"
+          [latitude]= latitude
+          [longitude]= longitude
+          [zoom]= zoom
           [disableDefaultUI]="true"
         >
-          <agm-marker
-            [latitude]="lat"
-            [longitude]="lng">
+          <agm-marker *ngFor="let marker of markers"
+            [latitude]="marker.lat"
+            [longitude]="marker.lng"
+          >
           </agm-marker>
         </agm-map>
       </div>
     </div>
     <div id="right">
       <div id="restaurants-div">
-        <div class="restaurants">
-          <div class="restaurant-card">
+        <div class="restaurants" *ngFor="let restaurant of restaurants">
+          <div class="restaurant-card" (click)="focusOn(restaurant.name)">
             <div class="first-card-div">
               <span>
-                GoodFood Lyon
+                {{ restaurant.name }}
               </span>
             </div>
             <div class="second-card-div">
               <span>
-                19 Quai Tilsitt
+                {{ restaurant.address }}
               </span>
             </div>
             <div class="third-card-div">
               <span>
-                69002
+                {{ restaurant.zipcode }}
               </span>
               <span>
-                Lyon
-              </span>
-            </div>
-          </div>
-          <div class="restaurant-card">
-            <div class="first-card-div">
-              <span>
-                GoodFood Saint-Etienne
-              </span>
-            </div>
-            <div class="second-card-div">
-              <span>
-                Place de l’hôtel de Ville
-              </span>
-            </div>
-            <div class="third-card-div">
-              <span>
-                42000
-              </span>
-              <span>
-                Saint-Etienne
-              </span>
-            </div>
-          </div>
-          <div class="restaurant-card">
-            <div class="first-card-div">
-              <span>
-                GoodFood Marseille
-              </span>
-            </div>
-            <div class="second-card-div">
-              <span>
-                72 Rue Paul Coxe
-              </span>
-            </div>
-            <div class="third-card-div">
-              <span>
-                13014
-              </span>
-              <span>
-                Marseille
-              </span>
-            </div>
-          </div>
-          <div class="restaurant-card">
-            <div class="first-card-div">
-              <span>
-                GoodFood Paris
-              </span>
-            </div>
-            <div class="second-card-div">
-              <span>
-                71 Av. Henri Martin
-              </span>
-            </div>
-            <div class="third-card-div">
-              <span>
-                75016
-              </span>
-              <span>
-                Paris
+                {{ restaurant.city }}
               </span>
             </div>
           </div>

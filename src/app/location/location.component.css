@@ -32,13 +32,13 @@ body {
   width: 80%;
   padding:15px;
   border: 1px solid;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 1em;
 }
 
 agm-map {
   width: 100%;
-  height: 44em;
+  height: 53.5em;
 }
 
 #right {
@@ -52,22 +52,24 @@ agm-map {
 .restaurant-card {
   width: 75%;
   border: 1px solid;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-left: 1em;
   margin-bottom: 1em;
   padding: 1em;
 }
 
 .restaurant-card:hover {
-  border-color: #B2451A;
-  color: #B2451A;
+  border-color: #3A0176;
+  background-color: #3A0176;
+  color: white;
   cursor: pointer;
 }
 
 .first-card-div {
-  font-family: bold;
+  font-weight: bold;
+
 }
 
 .second-card-div, .third-card-div {
-  font-family: italic;
+  font-style: italic;
 }

@@ -19,16 +19,17 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {AvatarModule} from 'ngx-avatar';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
-import {PizzalistComponent} from './pizzaList/pizzaList.component';
+import {DialogAddPizzaComponent, DialogDetailPizzaComponent, PizzalistComponent} from './pizzaList/pizzaList.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {HomeComponent} from './home/home.component';
 import {ShopComponent} from './shop/shop.component';
-import {LocationComponent} from './location/location.component';
-import {FooterComponent} from './footer/footer.component';
-import {RestaurantService} from './config/service';
+import { LocationComponent } from './location/location.component';
+import {FooterComponent } from './footer/footer.component';
+import {Service} from './config/service';
 import {ConnexionComponent} from './connexion/connexion.component';
 import {SignupComponent} from './signup/signup.component';
 import {
@@ -57,7 +58,9 @@ import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
     SignupComponent,
     DialogCommandesComponent,
     DialogPayComponent,
-    DialogAdresseComponent
+    DialogAdresseComponent,
+    DialogAddPizzaComponent,
+    DialogDetailPizzaComponent
   ],
   imports: [
     BrowserModule,
@@ -80,9 +83,10 @@ import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
     MatFormFieldModule,
     MatInputModule,
     AvatarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
   ],
-  providers: [ RestaurantService ],
+  providers: [ Service ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

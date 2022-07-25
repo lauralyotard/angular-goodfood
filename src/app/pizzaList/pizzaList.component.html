@@ -1,17 +1,18 @@
-<button mat-raised-button class="marg05 b-redbrown">Ajouter une pizza</button>
-<div class="d-flex j-content-ar marg2 r-line">
+<!--<a mat-raised-button class="marg05 b-redbrown" (click)="openDialogAddPizza()">Ajouter une pizza</a>-->
+<div class="d-flex j-content-ar r-line">
   <div *ngFor="let pizza of lesPizzas">
-    <mat-card class="card-size">
-      <div class="cross-align">
-        <a><img src="assets/img/cross.png" class="cross-size"/></a>
-      </div>
-      <mat-card-title>{{ pizza.name }}</mat-card-title>
-      <img class="pizzas-size" mat-card-image src="assets/img/{{ pizza.image }}.png">
-      <mat-card-subtitle>{{ pizza.price }} euros</mat-card-subtitle>
-      <mat-card-content class="content-size">{{ pizza.description }}</mat-card-content>
-      <mat-card-actions align="end">
-        <button mat-button class="b-lightcream">Ajouter</button>
-      </mat-card-actions>
-    </mat-card>
+      <mat-card class="card-size">
+      <a class="cursor" (click)="openDialogDetailPizza(pizza.id)">
+        <div class="cross-align">
+          <!--<a><img src="assets/img/cross.png" class="cross-size"/></a>-->
+        </div>
+        <mat-card-title>{{ pizza.name }}</mat-card-title>
+        <img class="pizzas-size" mat-card-image src="assets/img/{{ pizza.image }}.png">
+        <mat-card-subtitle>{{ pizza.price }} euros</mat-card-subtitle>
+      </a>
+        <mat-card-actions align="end">
+          <button class="al-bottom" mat-button (click)="openSnackBar()" class="b-lightcream">Ajouter</button>
+        </mat-card-actions>
+      </mat-card>
   </div>
 </div>
