@@ -20,7 +20,12 @@
           [zoom]= zoom
           [disableDefaultUI]="true"
         >
-          <agm-marker *ngFor="let marker of markers"
+        <agm-marker
+            [latitude]="latitude"
+            [longitude]="longitude"
+          >
+          </agm-marker>
+          <agm-marker *ngFor="let marker of restaurants"
             [latitude]="marker.lat"
             [longitude]="marker.lng"
           >
@@ -31,7 +36,7 @@
     <div id="right">
       <div id="restaurants-div">
         <div class="restaurants" *ngFor="let restaurant of restaurants">
-          <div class="restaurant-card" (click)="focusOn(restaurant.name)">
+          <div class="restaurant-card" (click)="focusOn(restaurant.lat, restaurant.lng)">
             <div class="first-card-div">
               <span>
                 {{ restaurant.name }}
