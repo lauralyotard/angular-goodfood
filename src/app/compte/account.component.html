@@ -4,7 +4,14 @@
       <div class="edit-button">
         <ngx-avatar size="100" src="https://thispersondoesnotexist.com/image"></ngx-avatar>
       </div>
-      <h3 class="profil-title">Camille Dupont</h3>
+      <div>
+        <div *ngIf="leUser !== undefined">
+          <h3 class="profil-title">{{ leUser.name }} {{ leUser.lastname }}</h3>
+        </div>
+        <div *ngIf="leUser === undefined">
+          <h3 class="profil-title">Chargement...</h3>
+        </div>
+      </div>
     </div>
     <div class="navbar-profil c-purple">
       <p><a class="link-style" (click)="showPage(num=1)">Mes commandes</a></p>
@@ -26,7 +33,7 @@
         </thead>
         <tbody>
         <tr *ngFor="let receipt of myReceipts">
-          <td>{{receipt.num}}</td>
+          <td>{{receipt.id}}</td>
           <th>{{receipt.price}}e</th>
           <td>{{receipt.desc}}</td>
           <td class="align-icon">
@@ -50,10 +57,10 @@
           </thead>
           <tbody>
           <tr>
-            <td>Ligne1</td>
-            <td>Ligne2</td>
-            <td>Ville</td>
-            <td>Code</td>
+            <td>Rue du puy</td>
+            <td></td>
+            <td>Lyon</td>
+            <td>69004</td>
             <td class="align-icon">
               <button mat-button><mat-icon>delete</mat-icon></button>
             </td>
@@ -85,7 +92,8 @@
           <tbody>
             <tr>
               <td>XXXX XXXX XXXX X324</td>
-              <td>Camille Dupont</td>
+              <td *ngIf="leUser !== undefined">{{ leUser.name }} {{ leUser.lastname }}</td>
+              <td *ngIf="leUser === undefined">Chargement...</td>
               <td>02/27</td>
               <td class="align-icon">
                 <button mat-button><mat-icon>delete</mat-icon></button>
