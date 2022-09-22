@@ -13,14 +13,20 @@ export class AccountComponent implements OnInit {
   constructor(public dialog: MatDialog, private userService: Service, private router: Router) {}
   public loaded: boolean = false;
   public leUser: userModel | undefined;
-  public myReceipts:receiptList[] = [
-    {id: '3A192374', price: 22, desc: 'P-Reine ; P-Saumon'},
-    {id: '4Z218463', price: 18, desc: 'P-Raclette'},
-  ];
+  public myReceipts:receiptList[] = [];
   num: number = 1;
 
   ngOnInit(): void {
-    this.getUser();
+    let test = localStorage.getItem('nom');
+    if(test != '' && test != null){
+      this.getUserTest();
+    }
+    else{
+      this.getUser();
+      this.myReceipts.push(
+        {id: '3A192374', price: 22, desc: 'P-Reine ; P-Saumon'},
+        {id: '4Z218463', price: 18, desc: 'P-Raclette'},)
+    }
   }
 
   showPage(numero: number) {
@@ -85,6 +91,17 @@ export class AccountComponent implements OnInit {
   }
 
   logout() {
+    let test = localStorage.getItem('nom');
+    if(test != null && test != ''){
+      localStorage.removeItem('nom');
+      localStorage.removeItem('prenom');
+      localStorage.removeItem('password');
+      localStorage.removeItem('telephone');
+      localStorage.removeItem('adresse');
+      localStorage.removeItem('codepostal');
+      localStorage.removeItem('ville');
+      localStorage.removeItem('pays');
+    }
     localStorage.removeItem('email');
     localStorage.setItem('isConnected', 'false');
     this.router.navigate(['app-home']);
@@ -95,11 +112,27 @@ export class AccountComponent implements OnInit {
 
   getUser(): void {
     this.loaded = true;
-    let aName = 'Tom';
+    let aName = 'Camille';
     this.userService.getUser(aName)
       .subscribe(
         (data: any) => {
           this.leUser = data
+          this.loaded = false;
+        });
+    console.log(this.leUser);
+  }
+
+  getUserTest(): void {
+    this.loaded = true;
+    let aName = 'Camille';
+    this.userService.getUser(aName)
+      .subscribe(
+        (data: any) => {
+          this.leUser = data
+          if(this.leUser){
+            this.leUser.name = localStorage.getItem('nom')!;
+            this.leUser.lastname = localStorage.getItem('prenom')!;
+          }
           this.loaded = false;
         });
     console.log(this.leUser);
