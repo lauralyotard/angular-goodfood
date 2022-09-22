@@ -26,6 +26,12 @@ export class Service {
     });
   }
 
+  /* --- USER --- */
+
+  getUser(userName: string): Observable<object> {
+    return this.http.get(`${this.basePath}/user/${userName}`);
+  }
+
   /* --- PIZZAS --- */
 
   getPizzas(idRestaurant: number): Observable<object> {

@@ -1,19 +1,27 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import {Service} from '../config/service';
 
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css']
 })
-export class AccountComponent {
-  constructor(public dialog: MatDialog) {}
+
+export class AccountComponent implements OnInit {
+  constructor(public dialog: MatDialog, private userService: Service, private router: Router) {}
+  public loaded: boolean = false;
+  public leUser: userModel | undefined;
   public myReceipts:receiptList[] = [
     {id: '3A192374', price: 22, desc: 'P-Reine ; P-Saumon'},
     {id: '4Z218463', price: 18, desc: 'P-Raclette'},
   ];
-
   num: number = 1;
+
+  ngOnInit(): void {
+    this.getUser();
+  }
 
   showPage(numero: number) {
     switch(this.num) {
@@ -75,12 +83,42 @@ export class AccountComponent {
       console.log(`Dialog result: ${result}`);
     });
   }
+
+  logout() {
+    localStorage.removeItem('email');
+    localStorage.setItem('isConnected', 'false');
+    this.router.navigate(['app-home']);
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
+  }
+
+  getUser(): void {
+    this.loaded = true;
+    let aName = 'Tom';
+    this.userService.getUser(aName)
+      .subscribe(
+        (data: any) => {
+          this.leUser = data
+          this.loaded = false;
+        });
+    console.log(this.leUser);
+  }
 }
 
 export interface receiptList{
   id:string;
   price: number;
   desc:string;
+}
+
+export interface userModel{
+  id: number;
+  name: string;
+  lastname: string;
+  phone: string;
+  email: string;
+  password: string;
 }
 
 @Component({
