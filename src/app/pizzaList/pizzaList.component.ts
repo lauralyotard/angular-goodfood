@@ -25,6 +25,20 @@ export class PizzalistComponent implements OnInit {
     this.getPizzas();
   }
 
+  addPizza(idPizza:number){
+    let value = localStorage.getItem(idPizza.toString())!;
+    let quantite:number = 0;
+    if(value == '' || value == null){
+      localStorage.setItem(idPizza.toString(), '0');
+    }
+    else{
+      quantite = parseInt(value);
+    }
+    quantite += 1;
+    localStorage.setItem(idPizza.toString(), quantite.toString());
+    this.openSnackBar(); 
+  }
+
   openSnackBar() {
     this._snackBar.open("Pizza ajoutée !", "Fermer", {
       duration: 3000,
@@ -48,6 +62,7 @@ export class PizzalistComponent implements OnInit {
           this.unePizza.image = uPizza.image
           this.unePizza.description = uPizza.description
         }
+      console.log(this.unePizza);
       return this.unePizza
     })
 

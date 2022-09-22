@@ -14,11 +14,11 @@
     <div>
       <button class="b-purple c-white" matBadgeColor="warn" routerLink="app-shop" mat-button>Panier</button>
     </div>
-    <div *ngIf="!t">
-      <button mat-raised-button class="b-white c-purple" routerLink="app-connexion" (click)="f1()">Connexion</button>
+    <div *ngIf="!status">
+      <button mat-raised-button class="b-white c-purple" routerLink="app-connexion">Connexion</button>
     </div>
-    <div *ngIf="t">
-      <button routerLink="app-account" mat-fab color="warn" class="b-purple" (click)="f1()">
+    <div *ngIf="status">
+      <button routerLink="app-account" mat-fab color="warn" class="b-purple">
         <mat-icon class="c-white">home</mat-icon>
       </button>
     </div>

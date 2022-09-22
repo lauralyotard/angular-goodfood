@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import {Service} from '../config/service';
 
 @Component({
@@ -7,8 +8,9 @@ import {Service} from '../config/service';
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css']
 })
+
 export class AccountComponent implements OnInit {
-  constructor(public dialog: MatDialog, private userService: Service) {}
+  constructor(public dialog: MatDialog, private userService: Service, private router: Router) {}
   public loaded: boolean = false;
   public leUser: userModel | undefined;
   public myReceipts:receiptList[] = [
@@ -80,6 +82,15 @@ export class AccountComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  logout() {
+    localStorage.removeItem('email');
+    localStorage.setItem('isConnected', 'false');
+    this.router.navigate(['app-home']);
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
   }
 
   getUser(): void {
