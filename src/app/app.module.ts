@@ -20,6 +20,7 @@ import {MatTableModule} from '@angular/material/table';
 import {AvatarModule} from 'ngx-avatar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import {DialogAddPizzaComponent, DialogDetailPizzaComponent, PizzalistComponent} from './pizzaList/pizzaList.component';
@@ -44,7 +45,6 @@ import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
   declarations: [
     AppComponent,
     LocationComponent,
-    AppComponent,
     PizzalistComponent,
     PageNotFoundComponent,
     NavbarComponent,
@@ -84,9 +84,12 @@ import {CgvMentionsComponent} from './cgv-mentions/cgv-mentions.component';
     MatInputModule,
     AvatarModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    FormsModule 
   ],
-  providers: [ Service ],
+  providers: [ 
+    Service
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

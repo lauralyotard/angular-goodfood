@@ -1,5 +1,6 @@
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-account',
@@ -7,7 +8,7 @@ import {MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent {
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog,  private router: Router) {}
   public myReceipts:receiptList[] = [
     {num: '3A192374', price: 22, desc: 'P-Reine ; P-Saumon'},
     {num: '4Z218463', price: 18, desc: 'P-Raclette'},
@@ -71,6 +72,15 @@ export class AccountComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  logout() {
+    localStorage.removeItem('email');
+    localStorage.setItem('isConnected', 'false');
+    this.router.navigate(['app-home']);
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
   }
 }
 
