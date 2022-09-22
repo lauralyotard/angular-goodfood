@@ -7,25 +7,25 @@
       <div>
         <mat-form-field class="div-full-width" appearance="fill">
           <mat-label>Nom</mat-label>
-          <input matInput>
+          <input [(ngModel)]="nom" name="nom" id="nom" matInput>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field class="div-full-width" appearance="fill">
           <mat-label>Prénom</mat-label>
-          <input type="password" matInput>
+          <input [(ngModel)]="prenom" name="prenom" id="prenom" matInput>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field class="div-full-width" appearance="fill">
           <mat-label>Email</mat-label>
-          <input matInput>
+          <input [(ngModel)]="email" name="email" id="email" matInput>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field class="div-full-width" appearance="fill">
           <mat-label>Mot de passe</mat-label>
-          <input type="password" matInput>
+          <input [(ngModel)]="password" name="password" id="password" type="password" matInput>
         </mat-form-field>
       </div>
       <div>
@@ -39,36 +39,36 @@
       <div>
         <mat-form-field class="div-full-width" appearance="fill">
           <mat-label>Téléphone</mat-label>
-          <input type="password" matInput>
+          <input [(ngModel)]="telephone" name="telephone" id="telephone" matInput>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field class="div-full-width" appearance="fill">
           <mat-label>Adresse</mat-label>
-          <input matInput>
+          <input [(ngModel)]="adresse" name="adresse" id="adresse" matInput>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field class="div-full-width" appearance="fill">
           <mat-label>Code postal</mat-label>
-          <input matInput>
+          <input [(ngModel)]="codepostal" name="codepostal" id="codepostal" matInput>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field class="div-full-width" appearance="fill">
           <mat-label>Ville</mat-label>
-          <input matInput>
+          <input [(ngModel)]="ville" name="ville" id="ville" matInput>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field class="div-full-width" appearance="fill">
           <mat-label>Pays</mat-label>
-          <input matInput>
+          <input [(ngModel)]="pays" name="pays" id="pays" matInput>
         </mat-form-field>
       </div>
     </div>
     <div id="signup-button" class="div-margin">
-      <a id="signup-link" mat-raised-button class="b-white c-purple" href="/app-home">Inscription</a>
+      <a id="signup-link" mat-raised-button class="b-white c-purple" (click)="signin(nom, prenom, email, password, telephone, adresse, codepostal, ville, pays)">Inscription</a>
     </div>
     <div class="div-margin div-center">
       <label id="connexion">

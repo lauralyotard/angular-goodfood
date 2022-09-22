@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  addTakeAway(){
+    localStorage.setItem('eatMod', 'takeaway');
+  }
+
+  addDelivery(){
+    localStorage.setItem('eatMod', 'delivery');
+  }
 }
